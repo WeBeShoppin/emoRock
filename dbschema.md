@@ -12,7 +12,7 @@
   c. size
   d. color
   e. price
-  f.
+  f. inventory quantity
 3. ORDER
   a. user FK
   b. product FK
