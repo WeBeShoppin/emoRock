@@ -10,7 +10,14 @@ const Product = db.define('product', {
     }
   },
   category: {
-    type: Sequelize.STRING,
+    type: Sequelize.ENUM(
+      'Fear',
+      'Enjoyment',
+      'Anger',
+      'Sadness',
+      'Misc',
+      'Disgust'
+    ),
     allowNull: false,
     validate: {
       notEmpty: true
