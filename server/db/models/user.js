@@ -45,9 +45,6 @@ const User = db.define('user', {
     type: Sequelize.BOOLEAN,
     defualt: false
   },
-  cartStatus: {
-    type: Sequelize.STRING
-  },
   googleId: {
     type: Sequelize.STRING
   }
