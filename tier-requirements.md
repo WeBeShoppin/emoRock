@@ -3,29 +3,41 @@
 ## Tier 1: MVP Shopping Experience
 
 ### As a customer/visitor, I want to be able to:
-- access a deployed version of the website so I can browse and purchase products.
-- view all available products so I can pick from a variety.
+- access a deployed version of the website so I can browse and purchase emoRocks.
+  - **Implementation**: deploy the project to Heroku
+- view all available emoRocks so I can pick from a variety.
+  - **Implementation**: a backend route `/api/rocks` should serve up for all emoRocks including their name, image, size and color, etc. No special access control is needed.
 - view a single product so I can see more details.
+  - **Implementation**: A backend route `api/rocks/:rockId` should serve up for a single emoRock with image, name, category, color, price, quantity, add to cart button, 'add to wish list' button, details, path(home/enjoyment/peace). No special access control is needed.
 - add a product to my cart so I can collect my desired products in one place.
+  - (?) **Implementation**: an "add to cart" button will update our store, so the cart in our store will be updated.
 - edit my cart if I change my mind:
-  - change the quantity of a product in my cart.
-  - remove a product in my cart.
+  - change the quantity of a product in my cart
+  - remove a product in my cart
   - *No one else should be able to edit my cart except me.*
+    - (?) **Implementation**: An "edit" button for changing the quantity, a "remove" button to set the quantity to be 0 in the cart. Each cart has a foreign key, which is the userId, only if the userId is the same as the current logged-in user, I can edit the cart.
 - "checkout" the items in my cart so I can purchase my desired goods.
   - *Think of a typical user experience on popular websites from a guest user and logged-in user perspective.*
   - *You can just start with by simulating the experience of checking out with a simple confirmation page.*
+    - (?) **Implementation**: For a guest, there won't have a session, so we can render a component to ask whether they want to create an account or just checkout as guest; the checkout page should render a checkout from for credit cart/billing address/shipping address/shipping options and a "place the order" button. Once the order is placed, the backend should make PUT request to update the database(the inventory of product, the order, etc).
 - create an account so I can have a logged-in experience.
+  - **Implementation**: render a "sign up" form and when "submit", the backend should make a POST request to create a new user to the database.
+
 
 ### As a logged-in customer, I want to be able to:
 - have a persistent cart so I can revisit and pick up where I left off.
   - *Logged-in-user across multiple devices: I'm logged in on my mobile device and add some items to my cart. When I open the browser on my laptop and log in, I want to see those items in my cart.*
   - *No one else should be able to edit my cart except me.*
+    - (???)**Implementation**: the cart of the logged-in user should be stored in the database **somehow**(we can figure this out together). If the cart has a foreign key 'userId' matching the current logged-in user, we pull up the shopping cart records.
+
 
 ### As an administrator, I want to be able to:
 - have validated data to ensure reliability.
   - *i.e. each customer that creates an account should only be able to do so once with a single email address.*
+    - **Implementation**: the email column in the model 'user' should be unique.
 - have full rights to make baceknd requests to add, edit, and remove products.
   - *No one else should have access.*
+    - (?)**Implementation**: give the admin a "isAdmin" midlleware to make backen request
 - view user information.
   - *No one else should have access.*
 
@@ -35,6 +47,7 @@
   - *For example, seed hundreds of products with dummy data so that when you get to the “pagination” user story, you won’t have to worry about adding more products.*
   - *Likewise, add a bunch of users with products in their carts so editing the cart can be worked on without already having the “add to cart” functionality built out.*
 - user data to be secure so that no one can unrightfully manipulate information.
+  - (?)**Implementation**: encrpted the user passwords in our database
 
 ## TIER 2: E-Commerce Essentials
 
