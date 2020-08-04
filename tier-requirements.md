@@ -34,8 +34,10 @@
 ### As an administrator, I want to be able to:
 - have validated data to ensure reliability.
   - *i.e. each customer that creates an account should only be able to do so once with a single email address.*
+    - **Implementation**: the email column in the model 'user' should be unique.
 - have full rights to make baceknd requests to add, edit, and remove products.
   - *No one else should have access.*
+    - (?)**Implementation**: give the admin a "isAdmin" midlleware to make backen request
 - view user information.
   - *No one else should have access.*
 
@@ -45,6 +47,7 @@
   - *For example, seed hundreds of products with dummy data so that when you get to the “pagination” user story, you won’t have to worry about adding more products.*
   - *Likewise, add a bunch of users with products in their carts so editing the cart can be worked on without already having the “add to cart” functionality built out.*
 - user data to be secure so that no one can unrightfully manipulate information.
+  - (?)**Implementation**: encrpted the user passwords in our database
 
 ## TIER 2: E-Commerce Essentials
 
