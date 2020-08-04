@@ -42,7 +42,7 @@ const User = db.define('user', {
     type: Sequelize.STRING
   },
   phone: {
-    type: Sequelize.INTEGER
+    type: Sequelize.STRING
   },
   isAdmin: {
     type: Sequelize.BOOLEAN,
