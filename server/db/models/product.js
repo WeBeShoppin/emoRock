@@ -8,6 +8,24 @@ const Product = db.define('product', {
     validate: {
       notEmpty: true
     }
+  },
+  category: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  price: {
+    type: Sequelize.FLOAT,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+      isFloat: true
+    }
+  },
+  color: {
+    type: Sequelize.STRING
   }
 })
 
