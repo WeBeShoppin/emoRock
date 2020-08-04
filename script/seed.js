@@ -2,66 +2,32 @@
 
 const db = require('../server/db')
 const {User, Product, Order} = require('../server/db/models')
+const {users, orders, products} = require('./seed/index')
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  const users = await Promise.all([
-    User.create({
-      firstName: 'Cody',
-      email: 'cody@email.com',
-      password: '123',
-      address: '1234 Front Alley Blvd'
-    }),
-    User.create({
-      firstName: 'Blake',
-      email: 'murphy@email.com',
-      password: '123'
-    })
-  ])
+  const dummyUsers = []
+  for (let i = 0; i < users.length; i++) {
+    let user = await User.create(users[i])
+    dummyUsers.push(user)
+  }
 
-  const products = await Promise.all([
-    Product.create({
-      name: 'product-1',
-      category: 'Fear',
-      price: 100.0,
-      color: 'orange'
-    }),
-    Product.create({
-      name: 'product-2',
-      category: 'Enjoyment',
-      price: 10.0,
-      color: 'blue'
-    }),
-    Product.create({
-      name: 'product-3',
-      category: 'Enjoyment',
-      price: 10.0,
-      color: 'blue'
-    }),
-    Product.create({
-      name: 'product-4',
-      category: 'Anger',
-      price: 10.0,
-      color: 'pink'
-    }),
-    Product.create({
-      name: 'product-5',
-      category: 'Disgust',
-      price: 10.0,
-      color: 'white'
-    })
-  ])
+  const dummyProducts = []
+  for (let i = 0; i < products.length; i++) {
+    let product = await Product.create(products[i])
+    dummyProducts.push(product)
+  }
 
-  const orders = await Promise.all([
-    Order.create({orderNumber: 111111, cartStatus: 'checkout'}),
-    Order.create({orderNumber: 222222, cartStatus: 'shipped'})
-  ])
-
-  console.log(`seeded ${users.length} users`)
-  console.log(`seeded ${products.length} products`)
-  console.log(`seeded ${orders.length} orders`)
+  const dummyOrders = []
+  for (let i = 0; i < orders.length; i++) {
+    let order = await Order.create(orders[i])
+    dummyOrders.push(order)
+  }
+  console.log(`seeded ${dummyUsers.length} users`)
+  console.log(`seeded ${dummyProducts.length} products`)
+  console.log(`seeded ${dummyOrders.length} orders`)
 
   console.log(`seeded successfully`)
 }
