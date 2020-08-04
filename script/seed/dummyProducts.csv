@@ -1,0 +1,501 @@
+id,name,category,price,color,orderId,createdAt,updatedAt
+1,White Milkwood,Misc,831.51,Blue,,7/20/2020,9/26/2019
+2,Indian Aconite,Sadness,188.76,Violet,,4/15/2020,3/5/2020
+3,Kauai Sedge,Sadness,482.64,Teal,,9/12/2019,10/3/2019
+4,Tasmanian Bluegum,Disgust,51.72,Pink,,9/28/2019,8/11/2019
+5,Waterer's Cotoneaster,Sadness,794.12,Aquamarine,,9/7/2019,7/5/2020
+6,Phaeographina Lichen,Disgust,90.95,Green,,4/23/2020,7/10/2020
+7,Chinese Chives,Sadness,752.88,Purple,,5/4/2020,10/5/2019
+8,Crowfoot Grass,Anger,428.85,Maroon,59,11/25/2019,3/19/2020
+9,Chambers' Bluegrass,Disgust,609.55,Puce,99,5/29/2020,1/5/2020
+10,Rhizomnium Moss,Enjoyment,674.56,Red,,2/22/2020,6/30/2020
+11,Tropical Leaf-flower,Anger,931.98,Crimson,80,5/11/2020,1/8/2020
+12,Kolea Lau Nui,Sadness,579.67,Fuscia,,4/18/2020,7/13/2020
+13,St. John's Bread,Sadness,937.50,Pink,,10/4/2019,9/29/2019
+14,Idaho Hymenopappus,Disgust,794.20,Teal,,8/10/2019,8/24/2019
+15,Sacramento Mountain Thistle,Misc,910.35,Teal,,4/7/2020,7/22/2020
+16,White Penstemon,Sadness,718.28,Turquoise,,5/12/2020,9/4/2019
+17,Smallflower Phyllostegia,Enjoyment,153.95,Khaki,,7/29/2020,8/22/2019
+18,Entireleaf Daisy,Enjoyment,234.34,Maroon,,5/31/2020,1/23/2020
+19,Shorea,Misc,550.19,Indigo,,1/15/2020,12/7/2019
+20,Longspine Horsebrush,Misc,175.62,Turquoise,,8/30/2019,12/24/2019
+21,Everniicola Lichen,Sadness,229.98,Purple,38,3/30/2020,7/16/2020
+22,Pearly Pussytoes,Enjoyment,628.65,Mauv,,8/3/2020,9/23/2019
+23,Scarlet Milkvetch,Anger,872.44,Maroon,83,4/21/2020,8/13/2019
+24,Shield Lichen,Misc,415.82,Khaki,12,2/26/2020,1/22/2020
+25,Mountain Threadplant,Sadness,87.27,Teal,,4/22/2020,8/28/2019
+26,Veiny Pepperweed,Sadness,504.03,Violet,,2/16/2020,7/14/2020
+27,Petunia,Enjoyment,389.90,Crimson,,7/6/2020,11/21/2019
+28,Condensed Snow Lichen,Fear,778.49,Aquamarine,,8/9/2019,8/1/2020
+29,Bryce Canyon Indian Paintbrush,Disgust,206.86,Turquoise,,5/18/2020,5/24/2020
+30,Dwarf Huckleberry,Fear,802.29,Blue,65,11/2/2019,11/9/2019
+31,Oregon Bleeding Heart,Sadness,348.67,Teal,39,11/12/2019,1/26/2020
+32,Cattail Grass,Misc,34.34,Mauv,25,11/6/2019,9/27/2019
+33,Bigfoot Waterclover,Sadness,361.19,Blue,,7/16/2020,10/25/2019
+34,James' Buckwheat,Anger,556.68,Fuscia,,5/19/2020,11/4/2019
+35,Reindeer Lichen,Anger,31.29,Green,,8/10/2019,11/24/2019
+36,Splendid Woodland-gilia,Anger,437.47,Violet,,5/26/2020,7/5/2020
+37,Zwackhiomyces Lichen,Disgust,74.41,Orange,,12/30/2019,6/1/2020
+38,Autumn Zephyrlily,Sadness,914.70,Orange,,2/1/2020,1/1/2020
+39,Dimocarpus,Anger,612.32,Maroon,55,5/6/2020,8/14/2019
+40,Texan Great Ragweed,Sadness,714.71,Pink,,8/13/2019,5/20/2020
+41,Crown Of Thorns,Anger,466.62,Orange,,6/12/2020,12/30/2019
+42,Hecistopteris,Enjoyment,750.39,Turquoise,,2/13/2020,7/25/2020
+43,Wild Tamarind,Sadness,948.93,Pink,,4/6/2020,12/18/2019
+44,Little Lady's Tresses,Disgust,576.75,Puce,,4/24/2020,10/1/2019
+45,Atamasco Lily,Fear,667.16,Fuscia,,7/21/2020,9/12/2019
+46,Dwarf Senna,Misc,142.00,Orange,8,4/12/2020,3/21/2020
+47,Forked Lineleaf Fern,Anger,704.78,Turquoise,70,6/11/2020,9/16/2019
+48,Sacred Bamboo,Disgust,2.90,Crimson,,2/28/2020,6/16/2020
+49,Mexican Pokeweed,Disgust,88.36,Teal,,7/7/2020,4/18/2020
+50,Occult Jelly Lichen,Anger,794.64,Indigo,,12/13/2019,6/28/2020
+51,Glandular Maiden Fern,Enjoyment,782.23,Crimson,,2/13/2020,12/12/2019
+52,Sauvagesia,Disgust,91.72,Orange,,4/10/2020,7/8/2020
+53,Megaspora Lichen,Enjoyment,334.96,Khaki,,3/31/2020,5/30/2020
+54,Whitetop,Fear,574.89,Purple,,12/27/2019,2/20/2020
+55,Maui Kihifern,Disgust,373.52,Maroon,,1/24/2020,11/10/2019
+56,Weed's Mariposa Lily,Anger,624.36,Yellow,50,12/26/2019,11/17/2019
+57,Fuzzy Dewberry,Sadness,142.52,Goldenrod,37,1/23/2020,6/18/2020
+58,Bristly Nama,Anger,177.13,Violet,,1/29/2020,3/1/2020
+59,Desert Mariposa Lily,Disgust,640.76,Teal,,2/15/2020,11/13/2019
+60,Polytrichum Moss,Misc,74.92,Teal,47,7/7/2020,5/2/2020
+61,Malperia,Disgust,954.90,Khaki,63,11/12/2019,2/13/2020
+62,Churchmouse Threeawn,Fear,586.52,Khaki,,8/18/2019,6/26/2020
+63,Hog Plum,Disgust,597.84,Fuscia,,8/23/2019,10/30/2019
+64,Pygmy Physcomitrium Moss,Misc,967.80,Goldenrod,,6/9/2020,11/9/2019
+65,Mountain Misery,Disgust,986.74,Violet,,7/20/2020,12/11/2019
+66,Disc Lichen,Enjoyment,652.15,Teal,,10/15/2019,7/13/2020
+67,Cliff Palace Milkvetch,Enjoyment,461.86,Khaki,85,3/26/2020,4/30/2020
+68,Louisiana Quillwort,Misc,920.55,Maroon,,4/15/2020,11/23/2019
+69,Japanese Chaff Flower,Disgust,944.27,Yellow,87,3/8/2020,8/25/2019
+70,Swordfern,Misc,833.37,Indigo,,7/4/2020,3/23/2020
+71,Bastard Milkvetch,Disgust,35.51,Indigo,,8/26/2019,3/5/2020
+72,Porter's Reedgrass,Disgust,309.57,Mauv,51,10/29/2019,8/29/2019
+73,Cavern Beard Lichen,Anger,123.58,Red,8,6/12/2020,5/13/2020
+74,Sharpscale Bulrush,Anger,883.06,Red,,12/11/2019,5/1/2020
+75,Havard Oak,Disgust,996.84,Pink,,6/13/2020,2/8/2020
+76,Coastal Bird's-foot Trefoil,Enjoyment,610.85,Yellow,,11/17/2019,2/18/2020
+77,Thymeleaf Sandwort,Anger,98.45,Goldenrod,,7/11/2020,7/28/2020
+78,Cobwebby Thistle,Disgust,881.97,Teal,,9/2/2019,6/4/2020
+79,Lemmon's Jewelflower,Misc,44.93,Pink,,8/17/2019,10/16/2019
+80,Texas Wildrye,Disgust,931.80,Pink,15,10/14/2019,7/15/2020
+81,Sonne's Arnica,Sadness,511.01,Blue,,6/8/2020,9/6/2019
+82,Cyrtandra,Sadness,981.62,Goldenrod,,2/28/2020,2/22/2020
+83,Ambiguous Ditrichum Moss,Disgust,533.77,Green,,2/29/2020,2/12/2020
+84,Deadly Nightshade,Sadness,470.98,Yellow,,8/29/2019,5/8/2020
+85,Ulihi Phyllostegia,Misc,842.59,Blue,15,1/31/2020,12/29/2019
+86,Stinking Milkvetch,Misc,210.81,Blue,,4/5/2020,11/18/2019
+87,Jamesianthus,Fear,811.06,Goldenrod,,8/10/2019,2/6/2020
+88,Roundleaf Alumroot,Enjoyment,144.84,Goldenrod,53,2/27/2020,10/30/2019
+89,Munson's Grape,Anger,79.91,Violet,42,7/14/2020,12/5/2019
+90,Ramonia,Misc,268.95,Indigo,64,8/14/2019,7/11/2020
+91,Pickerelweed,Misc,457.62,Purple,26,1/16/2020,1/12/2020
+92,Japanese Chaff Flower,Sadness,858.51,Violet,,8/31/2019,4/27/2020
+93,Chihuahuan Prairie Clover,Sadness,420.10,Crimson,,3/4/2020,1/19/2020
+94,Compact Scloiciosporum Lichen,Misc,601.01,Red,30,4/17/2020,2/16/2020
+95,Amberique-bean,Sadness,747.64,Aquamarine,56,1/12/2020,2/17/2020
+96,Aunt Lucy,Misc,558.85,Indigo,,6/28/2020,10/31/2019
+97,Island Spleenwort,Anger,347.16,Aquamarine,85,11/26/2019,9/29/2019
+98,Drooping Sedge,Fear,129.62,Orange,9,6/20/2020,6/25/2020
+99,Shining Blazingstar,Misc,503.96,Turquoise,,5/23/2020,10/21/2019
+100,Shelton's Monardella,Enjoyment,920.19,Green,,1/27/2020,3/12/2020
+101,Adanson's Monstera,Fear,481.01,Mauv,,10/29/2019,11/7/2019
+102,Andreaea Moss,Misc,531.98,Teal,56,7/8/2020,12/15/2019
+103,Great Basin Springbeauty,Misc,903.64,Teal,87,9/24/2019,3/3/2020
+104,Map Lichen,Enjoyment,383.04,Orange,,5/11/2020,3/14/2020
+105,Dotted Lancepod,Sadness,993.80,Puce,,10/18/2019,9/23/2019
+106,Mappia,Enjoyment,723.50,Khaki,,11/1/2019,2/14/2020
+107,Sweet William Silene,Misc,11.50,Green,66,11/14/2019,1/15/2020
+108,Pillwort,Enjoyment,806.19,Pink,78,8/16/2019,3/25/2020
+109,Carpetgrass,Sadness,159.82,Green,,2/15/2020,5/22/2020
+110,Heartleaf Suncup,Disgust,93.29,Teal,92,6/24/2020,1/10/2020
+111,Lindheimer's Hoarypea,Anger,443.35,Violet,,5/3/2020,10/14/2019
+112,Awlfruit Sedge,Fear,472.53,Red,,3/8/2020,7/12/2020
+113,African Daisy,Disgust,735.07,Khaki,,10/7/2019,6/3/2020
+114,Siberian Crab Apple,Enjoyment,591.41,Puce,,11/25/2019,2/13/2020
+115,Nearing's Lecidea Lichen,Fear,811.24,Turquoise,,4/17/2020,1/26/2020
+116,Map Lichen,Disgust,655.44,Pink,85,2/12/2020,3/19/2020
+117,Evergreen Quillwort,Enjoyment,535.40,Goldenrod,,9/13/2019,12/21/2019
+118,Montezuma County Beardtongue,Disgust,688.21,Violet,,11/23/2019,9/25/2019
+119,Chaplin's Golden Columbine,Disgust,909.00,Pink,67,10/9/2019,10/7/2019
+120,Kern Plateau Horkelia,Anger,892.61,Goldenrod,,5/1/2020,2/11/2020
+121,Silver Bur Ragweed,Disgust,36.23,Red,,8/22/2019,9/3/2019
+122,Chocolate Chip Lichen,Anger,862.67,Crimson,,10/19/2019,2/9/2020
+123,Indiangrass,Enjoyment,543.04,Fuscia,,7/3/2020,5/18/2020
+124,Orcutt Grass,Misc,252.31,Goldenrod,,4/26/2020,1/11/2020
+125,Whitemouth Dayflower,Misc,397.84,Crimson,6,1/3/2020,7/8/2020
+126,Bryson's Sedge,Misc,917.96,Indigo,,5/25/2020,10/12/2019
+127,Goldenclub,Enjoyment,406.97,Turquoise,,6/27/2020,7/8/2020
+128,Bulbil Bugle-lily,Sadness,370.12,Purple,33,10/17/2019,12/29/2019
+129,Spike Lichen,Fear,64.59,Red,62,1/5/2020,7/6/2020
+130,Honeysuckle,Sadness,534.98,Violet,,10/19/2019,4/8/2020
+131,Hybrid Violet,Anger,828.95,Indigo,,4/20/2020,3/16/2020
+132,Tropical Waxweed,Sadness,969.35,Violet,98,7/20/2020,7/24/2020
+133,Afghan Erysimum,Anger,895.28,Indigo,,2/24/2020,2/24/2020
+134,Pyrenopsis Lichen,Disgust,473.43,Crimson,,1/9/2020,5/1/2020
+135,Bird-of-paradise,Sadness,337.72,Turquoise,,9/22/2019,4/5/2020
+136,Cracked Lichen,Enjoyment,146.80,Aquamarine,,6/27/2020,3/9/2020
+137,Monarch Of The Veld,Misc,666.08,Purple,,7/12/2020,10/25/2019
+138,Cotoneaster,Enjoyment,964.69,Indigo,,3/16/2020,7/19/2020
+139,Candle Snuffer Moss,Misc,169.11,Indigo,42,11/3/2019,1/9/2020
+140,Absinthium,Misc,194.62,Khaki,68,5/23/2020,7/24/2020
+141,Bastard Redwood,Anger,184.05,Yellow,,9/22/2019,10/24/2019
+142,Tennessee Snow Lichen,Anger,152.81,Blue,,5/26/2020,8/9/2019
+143,Beeblossom,Sadness,536.07,Fuscia,,11/20/2019,1/23/2020
+144,Zarzabacoa De Monte,Misc,398.32,Khaki,,12/6/2019,11/24/2019
+145,Cleft Phlox,Fear,138.51,Maroon,17,1/15/2020,12/2/2019
+146,Wampi,Enjoyment,561.25,Indigo,,10/18/2019,11/3/2019
+147,Bolander's Lily,Enjoyment,952.18,Blue,,7/11/2020,9/12/2019
+148,Laupahoehoe Cyrtandra,Anger,78.72,Mauv,,10/24/2019,9/3/2019
+149,Creeping-oxeye,Fear,392.09,Fuscia,,10/9/2019,8/9/2019
+150,Bitter Root,Sadness,417.38,Turquoise,,6/4/2020,2/3/2020
+151,Disc Lichen,Disgust,325.55,Indigo,,4/21/2020,1/11/2020
+152,Carolina Campylopus Moss,Anger,476.83,Puce,,2/24/2020,6/19/2020
+153,Whitehead,Misc,206.08,Pink,,5/11/2020,8/23/2019
+154,Woody Rockcress,Enjoyment,261.96,Pink,,11/16/2019,6/18/2020
+155,Alpine Balsam,Anger,956.41,Blue,,4/11/2020,6/27/2020
+156,Twinberry,Enjoyment,479.42,Crimson,,1/2/2020,3/28/2020
+157,Rugel's Indianplantain,Misc,892.98,Yellow,,10/27/2019,5/30/2020
+158,James' Waterlily,Fear,45.91,Blue,,2/20/2020,10/22/2019
+159,Cypress Spurge,Anger,397.89,Red,,5/10/2020,2/15/2020
+160,Dwarf She-oak,Sadness,519.26,Puce,,11/28/2019,3/6/2020
+161,Whitefingers Lichen,Enjoyment,444.52,Violet,,12/20/2019,4/11/2020
+162,Breutel's Notothylas,Fear,140.05,Blue,,12/14/2019,7/22/2020
+163,Russian Tamarisk,Enjoyment,217.52,Blue,,4/27/2020,11/3/2019
+164,Cherangani Clover,Anger,443.75,Green,,4/2/2020,11/16/2019
+165,Pedicellate Phacelia,Disgust,563.68,Turquoise,3,10/30/2019,1/21/2020
+166,Aquarius Plateau Indian Paintbrush,Fear,158.58,Khaki,,12/15/2019,1/6/2020
+167,Dot Lichen,Disgust,8.57,Green,,9/26/2019,8/6/2019
+168,Serillo Dulce,Disgust,805.66,Khaki,,12/27/2019,4/25/2020
+169,Western False Asphodel,Fear,193.18,Goldenrod,,8/20/2019,5/12/2020
+170,Brachelyma Moss,Misc,920.02,Fuscia,,6/5/2020,6/8/2020
+171,Green Carpetweed,Fear,780.09,Fuscia,,3/11/2020,7/10/2020
+172,Pacific Pea,Fear,857.44,Indigo,,9/24/2019,4/5/2020
+173,Richardson's Alumroot,Fear,313.34,Puce,,5/30/2020,8/14/2019
+174,Maryland Goldenaster,Enjoyment,578.47,Yellow,,6/4/2020,11/26/2019
+175,Alkali Wildrye,Sadness,70.54,Khaki,24,10/1/2019,5/14/2020
+176,Gray Rupturewort,Enjoyment,666.89,Orange,,10/14/2019,12/10/2019
+177,Sand Bittercress,Fear,323.44,Orange,,12/4/2019,8/5/2019
+178,Wright's Waternymph,Anger,258.50,Teal,,2/4/2020,10/30/2019
+179,Cryphaea Moss,Fear,233.04,Orange,,8/13/2019,12/28/2019
+180,Hawthorn,Misc,569.05,Maroon,,7/8/2020,12/23/2019
+181,Broom Sedge,Disgust,29.20,Red,,7/10/2020,10/3/2019
+182,Rim Lichen,Anger,733.92,Blue,,11/22/2019,1/10/2020
+183,Bryson's Sedge,Fear,904.19,Red,,11/17/2019,3/17/2020
+184,False Goldenweed,Sadness,758.99,Crimson,64,11/16/2019,4/3/2020
+185,Weeping Grass,Disgust,87.79,Purple,68,9/19/2019,7/16/2020
+186,Whiteflower Passionflower,Fear,722.77,Maroon,,7/2/2020,10/19/2019
+187,Donner Lake Lupine,Sadness,980.70,Blue,,2/9/2020,1/2/2020
+188,Pennsylvania Hawthorn,Enjoyment,513.05,Aquamarine,,3/11/2020,6/20/2020
+189,Bryum Moss,Misc,43.17,Maroon,37,12/30/2019,11/17/2019
+190,Apricot Globemallow,Fear,612.80,Pink,,10/27/2019,3/27/2020
+191,Water Wattle,Fear,543.25,Violet,,7/8/2020,3/1/2020
+192,Common Deerweed,Fear,849.37,Crimson,72,5/16/2020,8/12/2019
+193,Blue Ridge Carrionflower,Anger,133.23,Green,,6/4/2020,7/12/2020
+194,Garden-huckleberry,Enjoyment,632.48,Maroon,,3/15/2020,1/2/2020
+195,Small-leaf Pussytoes,Anger,186.56,Turquoise,38,11/20/2019,10/28/2019
+196,Nealley's Woollygrass,Fear,526.01,Yellow,43,8/22/2019,7/29/2020
+197,Panicledleaf Ticktrefoil,Sadness,233.88,Fuscia,,1/26/2020,11/9/2019
+198,Golden Hala Pepe,Enjoyment,155.36,Violet,,2/5/2020,1/24/2020
+199,Summergrass,Anger,102.84,Green,,6/17/2020,4/11/2020
+200,Azure Penstemon,Sadness,956.71,Turquoise,10,7/6/2020,5/3/2020
+201,Saber Bogmat,Disgust,765.85,Blue,,1/30/2020,6/24/2020
+202,Slender Woolly Buckwheat,Sadness,313.36,Pink,,10/15/2019,8/21/2019
+203,Gingerleaf,Enjoyment,23.56,Maroon,26,2/2/2020,8/26/2019
+204,Beatley's Milkvetch,Misc,469.59,Pink,33,9/29/2019,10/23/2019
+205,Silverleaf Hydrangea,Fear,507.39,Indigo,29,10/26/2019,4/30/2020
+206,Hooded Orchid,Anger,905.48,Goldenrod,,9/22/2019,3/2/2020
+207,Sphagnum,Fear,845.49,Green,,5/18/2020,3/31/2020
+208,False Jagged-ckickweed,Fear,260.92,Crimson,,11/15/2019,5/18/2020
+209,Taxiphyllum Moss,Enjoyment,125.28,Maroon,,7/1/2020,7/25/2020
+210,Cooper's Rein Orchid,Anger,447.33,Maroon,,9/18/2019,5/29/2020
+211,Golden Colicroot,Enjoyment,658.81,Goldenrod,,12/29/2019,11/13/2019
+212,Spiny Plumeless Thistle,Enjoyment,679.09,Pink,,12/3/2019,10/10/2019
+213,Aromatic Bruised Lichen,Disgust,894.50,Maroon,,12/1/2019,12/13/2019
+214,Jacob's-ladder,Disgust,84.83,Red,,12/4/2019,3/12/2020
+215,Moore's Brake,Sadness,549.43,Goldenrod,,2/1/2020,4/20/2020
+216,Sutherland Hawthorn,Sadness,397.23,Teal,,5/12/2020,1/11/2020
+217,Shrubby Yellowcrest,Anger,280.96,Khaki,,2/3/2020,10/20/2019
+218,Caribbean Strap Airplant,Anger,130.24,Purple,,12/5/2019,7/2/2020
+219,Canadian Hawkweed,Fear,779.09,Khaki,,4/26/2020,8/31/2019
+220,Thymeleaf Dragonhead,Fear,759.02,Blue,67,10/16/2019,7/2/2020
+221,Orange Milkwort,Sadness,188.48,Puce,47,5/23/2020,2/29/2020
+222,Woodbalm,Disgust,342.02,Maroon,,11/5/2019,4/11/2020
+223,False Mayweed,Enjoyment,806.25,Turquoise,85,7/31/2020,4/4/2020
+224,Solandra,Anger,347.04,Pink,11,1/9/2020,4/1/2020
+225,Sulphur Clover,Misc,603.42,Yellow,,2/14/2020,6/10/2020
+226,Cassumunar Ginger,Anger,972.53,Orange,,3/4/2020,2/15/2020
+227,Shell Lichen,Enjoyment,805.26,Indigo,,8/21/2019,5/1/2020
+228,Weak Sedge,Anger,564.30,Red,38,10/5/2019,12/9/2019
+229,Beavertail Pricklypear,Misc,996.42,Purple,90,2/14/2020,3/18/2020
+230,Ye Gu,Anger,869.71,Indigo,,7/31/2020,4/13/2020
+231,Moco De Pavo,Disgust,41.20,Yellow,,11/8/2019,2/23/2020
+232,Honeywort,Fear,78.05,Pink,41,7/1/2020,12/21/2019
+233,Foothill Deervetch,Disgust,213.75,Yellow,,9/11/2019,8/17/2019
+234,Manila Grass,Anger,165.51,Goldenrod,,11/4/2019,11/8/2019
+235,Mccart's Nailwort,Misc,206.31,Pink,,8/16/2019,4/4/2020
+236,Keyflower,Sadness,905.72,Red,,7/23/2020,10/22/2019
+237,Green Caskfruit,Fear,277.96,Mauv,,10/31/2019,8/12/2019
+238,Pin-leaf Seepweed,Misc,893.86,Goldenrod,,10/28/2019,9/15/2019
+239,Hollyfern,Sadness,182.62,Teal,52,5/5/2020,8/31/2019
+240,Blackfoot Quillwort,Sadness,862.79,Maroon,,5/29/2020,7/5/2020
+241,Matted Saxifrage,Fear,90.68,Puce,74,8/14/2019,9/14/2019
+242,Texan Great Ragweed,Sadness,244.03,Turquoise,,5/23/2020,4/10/2020
+243,Tufted Poppy,Enjoyment,737.41,Puce,93,11/10/2019,6/21/2020
+244,Hinahina,Disgust,512.54,Red,16,12/24/2019,2/24/2020
+245,Wingstem Monkeyflower,Misc,75.58,Mauv,,1/13/2020,7/1/2020
+246,Scouler's Popcornflower,Misc,289.21,Maroon,86,11/14/2019,8/16/2019
+247,Alpine Milkvetch,Enjoyment,910.96,Mauv,68,11/5/2019,1/23/2020
+248,Toyon,Misc,925.44,Turquoise,16,2/13/2020,5/15/2020
+249,Asian Flax,Disgust,824.72,Pink,,6/25/2020,4/20/2020
+250,Nodding Milkweed,Misc,914.46,Mauv,,5/20/2020,1/5/2020
+251,Utah Mortonia,Sadness,501.26,Pink,78,2/13/2020,7/27/2020
+252,Curvedleaf Ulota Moss,Disgust,992.03,Indigo,43,11/18/2019,10/31/2019
+253,Alachua Bully,Fear,589.67,Mauv,,9/3/2019,8/5/2019
+254,Pineland Fern,Enjoyment,293.31,Puce,40,8/8/2019,8/29/2019
+255,Spanish Stenocereus,Fear,555.17,Purple,66,1/13/2020,6/23/2020
+256,Hairy Rupturewort,Misc,973.90,Maroon,36,6/1/2020,10/19/2019
+257,Rocky Mountain Fringed Gentian,Anger,899.08,Pink,33,12/28/2019,11/23/2019
+258,Toughleaf Iris,Enjoyment,691.22,Aquamarine,,12/18/2019,7/7/2020
+259,Rough Dubautia,Enjoyment,425.73,Goldenrod,,1/21/2020,10/26/2019
+260,Stoloniferous Pussytoes,Disgust,365.12,Fuscia,96,4/11/2020,10/11/2019
+261,Ximenia,Sadness,710.64,Orange,,1/1/2020,8/24/2019
+262,Dodge's Hawthorn,Anger,274.16,Violet,,1/23/2020,11/13/2019
+263,Lotus,Sadness,791.18,Teal,,9/7/2019,6/11/2020
+264,Ropalospora Lichen,Disgust,542.70,Aquamarine,,5/12/2020,5/3/2020
+265,Sobralia,Sadness,514.17,Yellow,,1/29/2020,7/20/2020
+266,Hinahina,Anger,583.23,Aquamarine,,8/31/2019,1/12/2020
+267,Proctor's Zephyrlily,Disgust,105.26,Purple,,10/11/2019,10/13/2019
+268,Sierra Mint,Sadness,880.14,Crimson,84,8/15/2019,1/7/2020
+269,Phanerophlebia,Misc,631.13,Indigo,,10/9/2019,2/21/2020
+270,Tasmanian Bluegum,Enjoyment,899.57,Turquoise,,6/22/2020,3/28/2020
+271,Hale's Rosette Lichen,Misc,911.71,Green,,9/22/2019,7/27/2020
+272,Mountain Sedge,Enjoyment,891.69,Yellow,,3/1/2020,1/16/2020
+273,Witch's Moneybags,Misc,333.14,Violet,76,12/28/2019,10/13/2019
+274,Desert Wirelettuce,Disgust,168.90,Purple,,2/21/2020,8/1/2020
+275,Bigseed Biscuitroot,Sadness,808.80,Yellow,,3/27/2020,2/6/2020
+276,Munz's Buckwheat,Sadness,326.83,Indigo,,5/14/2020,2/9/2020
+277,Michaux's Saxifrage,Misc,434.45,Teal,,4/5/2020,2/3/2020
+278,Sundew,Disgust,311.91,Green,,3/26/2020,2/24/2020
+279,Loomis' Thimblehead,Disgust,842.30,Fuscia,,9/24/2019,10/18/2019
+280,Roughleaf Coneflower,Enjoyment,924.33,Blue,,5/5/2020,10/27/2019
+281,Northwestern Twayblade,Sadness,737.43,Indigo,34,3/2/2020,3/3/2020
+282,Slender Hawkweed,Misc,247.66,Purple,,4/15/2020,2/10/2020
+283,Dense Blazing Star,Misc,850.39,Indigo,,6/4/2020,5/31/2020
+284,Canyon Bird's-foot Trefoil,Disgust,925.15,Yellow,,8/19/2019,7/11/2020
+285,Trans-pecos Desert Goldenrod,Sadness,91.97,Maroon,37,2/13/2020,10/28/2019
+286,Lecidea Lichen,Anger,232.81,Indigo,,12/24/2019,4/22/2020
+287,Buckwheat,Enjoyment,545.72,Maroon,,12/13/2019,12/5/2019
+288,Buko,Disgust,279.98,Turquoise,,6/17/2020,7/11/2020
+289,Bullwood,Fear,362.99,Green,,12/13/2019,11/30/2019
+290,Foothill Beardtongue,Misc,181.91,Teal,,2/27/2020,9/23/2019
+291,Oceanspray,Fear,978.59,Teal,,10/4/2019,11/27/2019
+292,Lindsey's Cyanea,Enjoyment,261.15,Fuscia,,4/30/2020,7/5/2020
+293,Thickleaf Yerba Santa,Disgust,944.88,Indigo,,10/5/2019,7/10/2020
+294,Mann's Landolphia,Anger,191.28,Green,,4/27/2020,4/7/2020
+295,Defect Barnacle Lichen,Fear,83.65,Orange,,4/17/2020,3/1/2020
+296,Arizona Bugbane,Sadness,967.04,Purple,,7/13/2020,11/16/2019
+297,Haha'aiakamanu,Fear,881.17,Pink,,5/21/2020,12/13/2019
+298,Rim Lichen,Disgust,854.66,Blue,,1/29/2020,2/17/2020
+299,Blue Skullcap,Misc,371.39,Turquoise,18,2/18/2020,10/20/2019
+300,Fewflower Spikerush,Anger,681.53,Purple,26,8/25/2019,10/5/2019
+301,Spreading Buckwheat,Anger,130.63,Goldenrod,,12/20/2019,8/16/2019
+302,Trillium,Anger,935.32,Pink,84,3/8/2020,1/15/2020
+303,Rose Spirea,Sadness,542.14,Violet,8,6/22/2020,1/17/2020
+304,Shrubby Blue Sage,Sadness,335.02,Indigo,84,9/11/2019,10/29/2019
+305,Stahlia,Anger,912.81,Red,,1/19/2020,12/10/2019
+306,Snow Raspberry,Enjoyment,239.81,Mauv,,10/5/2019,3/18/2020
+307,Dwarf Mock Orange,Fear,22.16,Purple,,4/12/2020,4/24/2020
+308,Northern Fescue,Disgust,356.20,Khaki,,3/13/2020,7/23/2020
+309,California Goldfields,Misc,996.26,Indigo,27,9/23/2019,2/7/2020
+310,Kelsey's Phlox,Enjoyment,468.57,Red,57,3/29/2020,4/3/2020
+311,Hooker's Townsend Daisy,Anger,5.44,Violet,6,4/4/2020,12/5/2019
+312,Fiveflower Rockdaisy,Sadness,309.92,Green,46,9/21/2019,4/8/2020
+313,Swallen's Needlegrass,Misc,457.79,Blue,,3/21/2020,10/7/2019
+314,Longleaf Fleabane,Fear,17.12,Red,52,8/14/2019,1/25/2020
+315,Yellow Spiderflower,Misc,360.57,Indigo,,8/30/2019,8/1/2020
+316,Grimmia Dry Rock Moss,Enjoyment,439.39,Blue,9,1/5/2020,6/23/2020
+317,Dwarf Senna,Misc,820.87,Crimson,,4/18/2020,10/25/2019
+318,Amblystegium Moss,Fear,338.91,Aquamarine,,10/10/2019,10/26/2019
+319,Beatley's Phacelia,Disgust,199.57,Crimson,,8/16/2019,5/10/2020
+320,Northern Evening Primrose,Disgust,376.52,Red,,7/14/2020,7/15/2020
+321,Sierra Bayberry,Sadness,168.79,Crimson,,7/5/2020,8/24/2019
+322,Sierra De Cayey Stopper,Enjoyment,384.72,Purple,,3/15/2020,6/7/2020
+323,California Lecania Lichen,Enjoyment,941.18,Orange,30,4/1/2020,10/29/2019
+324,Saltmarsh False Foxglove,Disgust,606.43,Purple,,6/3/2020,1/4/2020
+325,Horsehair Lichen,Anger,723.45,Puce,,2/16/2020,5/21/2020
+326,Singapore Graveyard Flower,Sadness,222.98,Teal,,12/10/2019,4/22/2020
+327,Oahu Kihifern,Misc,56.33,Maroon,,7/29/2020,7/7/2020
+328,Picabo Milkvetch,Misc,483.69,Aquamarine,,11/5/2019,2/10/2020
+329,Smallflower Blueberry,Sadness,19.64,Pink,,1/24/2020,2/9/2020
+330,Biennial Cinquefoil,Misc,83.52,Teal,,11/22/2019,7/11/2020
+331,Nuttall's Toothwort,Disgust,945.00,Green,71,1/31/2020,6/20/2020
+332,Jones' Buckwheat,Sadness,312.97,Aquamarine,75,4/18/2020,11/2/2019
+333,Woolly Clover,Misc,294.03,Blue,,10/14/2019,8/10/2019
+334,Brazos Milkvetch,Fear,246.87,Khaki,,7/19/2020,7/27/2020
+335,Texas Stork's Bill,Disgust,322.45,Violet,,4/16/2020,2/5/2020
+336,Grama,Anger,839.73,Pink,,2/18/2020,12/3/2019
+337,Proctor's Agave,Misc,12.83,Puce,,9/12/2019,5/5/2020
+338,Coral Vine,Anger,129.63,Fuscia,,9/12/2019,1/31/2020
+339,Albaida,Anger,897.18,Orange,,7/22/2020,3/16/2020
+340,White Star Apple,Anger,687.11,Green,,4/6/2020,1/2/2020
+341,Mottled Spurge,Misc,780.34,Goldenrod,,7/20/2020,12/12/2019
+342,Smallcane,Sadness,665.06,Fuscia,,6/6/2020,2/23/2020
+343,Limnophila,Anger,844.94,Green,,12/2/2019,3/27/2020
+344,Knapweed,Anger,111.34,Yellow,,3/10/2020,9/15/2019
+345,Toft's Yucca,Enjoyment,563.21,Mauv,,1/19/2020,1/31/2020
+346,English Elm,Sadness,500.80,Teal,,1/8/2020,10/19/2019
+347,Western Showy Aster,Enjoyment,992.00,Puce,,2/16/2020,12/31/2019
+348,Hudson Bay Eyebright,Sadness,959.09,Fuscia,,11/9/2019,6/27/2020
+349,Andreaea Moss,Anger,882.53,Turquoise,,11/13/2019,8/15/2019
+350,Nevin's Gilia,Misc,439.02,Goldenrod,,1/5/2020,4/23/2020
+351,Eastwood's Baby Blue Eyes,Enjoyment,883.30,Khaki,83,11/20/2019,11/29/2019
+352,Ruby Chalice Clarkia,Enjoyment,336.52,Mauv,,8/18/2019,1/15/2020
+353,Woolly Sunflower,Fear,446.60,Mauv,,3/19/2020,6/25/2020
+354,Hesperochiron,Misc,336.47,Green,,9/4/2019,3/23/2020
+355,Astrophytum,Anger,691.97,Violet,,5/4/2020,5/7/2020
+356,Dot Lichen,Misc,671.16,Goldenrod,,12/10/2019,1/26/2020
+357,Sentry Milkvetch,Misc,638.64,Red,,9/8/2019,7/20/2020
+358,Shortstem Buckwheat,Sadness,131.67,Aquamarine,,4/1/2020,1/4/2020
+359,Arkansas Yucca,Fear,399.67,Yellow,,9/11/2019,8/8/2019
+360,Weeping Grass,Fear,923.54,Purple,,10/16/2019,12/22/2019
+361,Woollyfruit Desertparsley,Misc,138.09,Orange,,8/23/2019,9/15/2019
+362,Fen Grass Of Parnassus,Misc,199.36,Mauv,83,10/26/2019,4/22/2020
+363,Baker's Manzanita,Disgust,603.12,Violet,,6/12/2020,9/14/2019
+364,Cima Milkvetch,Sadness,181.92,Aquamarine,91,2/27/2020,6/5/2020
+365,False Shieldfern,Fear,562.46,Mauv,10,4/13/2020,11/8/2019
+366,Dryptodon Moss,Enjoyment,402.27,Mauv,,9/7/2019,4/1/2020
+367,Wedgeleaf Draba,Disgust,94.22,Yellow,33,11/6/2019,9/1/2019
+368,Shining Gum,Fear,786.47,Maroon,,12/20/2019,4/23/2020
+369,Florida Yellow-eyed-grass,Enjoyment,96.30,Crimson,83,11/23/2019,2/6/2020
+370,Alpine Sheep Sorrel,Sadness,495.22,Yellow,,3/12/2020,10/16/2019
+371,Carolina Dayflower,Fear,197.90,Red,,5/24/2020,8/26/2019
+372,Bluntleaf Waterleaf,Disgust,313.95,Green,,2/11/2020,9/5/2019
+373,Wavyleaf Silktassel,Anger,22.22,Red,82,2/11/2020,3/8/2020
+374,Triangle Cactus,Fear,108.78,Yellow,,5/9/2020,9/26/2019
+375,Smooth Hawksbeard,Enjoyment,39.39,Yellow,,10/10/2019,9/29/2019
+376,Bitter Root,Anger,444.36,Pink,,4/24/2020,12/31/2019
+377,White Mountain Lupine,Sadness,23.63,Puce,,11/6/2019,8/29/2019
+378,Saltmeadow Rush,Sadness,89.51,Mauv,59,11/30/2019,10/29/2019
+379,Mountain Blue Penstemon,Sadness,363.02,Red,,7/25/2020,11/24/2019
+380,Little Larkspur,Sadness,118.97,Green,,4/20/2020,11/24/2019
+381,Chinese Raspwort,Anger,377.95,Fuscia,,7/10/2020,11/9/2019
+382,Tracy's Bluestem,Enjoyment,374.15,Indigo,,5/4/2020,9/13/2019
+383,Vanbrunt's Polemonium,Sadness,524.97,Green,,9/13/2019,4/9/2020
+384,White Insideout Flower,Enjoyment,403.79,Goldenrod,,2/13/2020,9/25/2019
+385,Sphaerellothecium Lichen,Sadness,567.10,Khaki,,8/24/2019,10/13/2019
+386,Hawai'i Nutrush,Enjoyment,812.05,Turquoise,,7/21/2020,4/20/2020
+387,Redbud,Fear,61.78,Fuscia,,3/6/2020,1/2/2020
+388,Cracked Lichen,Misc,79.83,Yellow,37,4/21/2020,12/5/2019
+389,Gentian,Misc,660.35,Yellow,,10/2/2019,12/19/2019
+390,Kohala Mountain Stenogyne,Disgust,293.16,Blue,,3/31/2020,2/8/2020
+391,Vervain,Fear,299.45,Goldenrod,,1/11/2020,10/11/2019
+392,Stiff Clubmoss,Enjoyment,551.15,Khaki,88,3/29/2020,11/26/2019
+393,Mediterranean Pepperweed,Misc,455.28,Fuscia,,6/10/2020,11/16/2019
+394,Chapman's Fringed Orchid,Anger,745.98,Goldenrod,,7/13/2020,10/1/2019
+395,Bolander's Onion,Misc,860.14,Khaki,36,7/22/2020,7/11/2020
+396,Creeping Mirrorplant,Anger,532.99,Teal,,12/29/2019,12/7/2019
+397,Duboisia,Enjoyment,272.76,Turquoise,,4/2/2020,9/22/2019
+398,Booth's Suncup,Disgust,415.41,Aquamarine,30,3/4/2020,2/6/2020
+399,Herman's Dwarf Rush,Misc,231.10,Orange,,10/7/2019,3/7/2020
+400,Trans-pecos Cliffbrake,Disgust,902.52,Crimson,,11/8/2019,8/23/2019
+401,Longstalk Starwort,Fear,10.32,Pink,47,12/17/2019,8/2/2020
+402,Tree Groundpine,Anger,219.74,Indigo,15,8/2/2020,4/2/2020
+403,Chaparral Broomrape,Sadness,737.77,Indigo,,8/1/2020,11/11/2019
+404,Larch,Anger,889.59,Crimson,,9/13/2019,2/7/2020
+405,Sessileleaf Strap Airplant,Fear,376.39,Pink,,6/20/2020,10/29/2019
+406,Kearney's Sumac,Enjoyment,225.33,Puce,65,2/13/2020,7/14/2020
+407,Inga,Enjoyment,594.87,Violet,44,12/18/2019,4/27/2020
+408,Sphenoclea,Misc,932.70,Turquoise,,1/29/2020,11/18/2019
+409,Yellow Rabbitbrush,Disgust,30.15,Maroon,,3/25/2020,7/27/2020
+410,Parry's Blue Eyed Mary,Enjoyment,721.96,Aquamarine,20,9/3/2019,12/5/2019
+411,Venidium,Misc,755.15,Khaki,,11/9/2019,3/21/2020
+412,Western Sandspurry,Disgust,867.91,Aquamarine,,1/9/2020,8/19/2019
+413,Santa Monica Rinodina Lichen,Anger,56.86,Aquamarine,,3/28/2020,3/4/2020
+414,Marunguey,Anger,651.22,Aquamarine,56,10/25/2019,8/14/2019
+415,Milkwort Knotweed,Fear,814.72,Purple,75,1/14/2020,8/6/2019
+416,Stewart's Little Walnut,Sadness,53.01,Turquoise,9,3/22/2020,11/28/2019
+417,Spiked Woodrush,Anger,612.91,Teal,79,11/30/2019,6/19/2020
+418,Peralejo,Misc,736.23,Pink,,5/17/2020,8/27/2019
+419,Jamaican Broom,Disgust,653.78,Puce,,11/12/2019,1/29/2020
+420,Gray Alder,Fear,408.81,Teal,,9/21/2019,12/10/2019
+421,Sand Leek,Disgust,509.06,Indigo,,5/7/2020,7/16/2020
+422,Jointfir,Misc,552.65,Violet,,4/11/2020,10/22/2019
+423,Cracked Lichen,Anger,547.64,Purple,,7/12/2020,9/16/2019
+424,Graphina Lichen,Anger,909.26,Red,,12/27/2019,7/15/2020
+425,Condensed Dicranum Moss,Sadness,280.81,Crimson,,10/21/2019,10/4/2019
+426,Rushpink Skeletonplant,Misc,385.38,Green,77,6/16/2020,10/7/2019
+427,Colorado Rush,Misc,868.97,Violet,29,7/7/2020,7/8/2020
+428,Polar Sedge,Anger,67.58,Maroon,,5/12/2020,10/22/2019
+429,Anisescented Goldenrod,Fear,113.11,Maroon,,9/8/2019,2/12/2020
+430,Brighamia,Misc,932.82,Turquoise,,7/12/2020,8/31/2019
+431,Mexican Saucerflower,Enjoyment,950.91,Goldenrod,77,10/5/2019,4/14/2020
+432,Elephant Panicgrass,Fear,771.52,Yellow,,3/30/2020,2/21/2020
+433,Polypremum,Enjoyment,187.36,Green,30,11/12/2019,3/16/2020
+434,Pogonatum Moss,Disgust,832.70,Blue,,6/16/2020,5/29/2020
+435,Larchleaf Beardtongue,Disgust,787.27,Purple,85,11/27/2019,11/26/2019
+436,Santolina Pincushion,Disgust,476.13,Red,,5/10/2020,6/3/2020
+437,Beautiful Rockcress,Sadness,410.88,Indigo,17,7/2/2020,1/10/2020
+438,Little Aguja Pondweed,Enjoyment,503.63,Red,,11/15/2019,4/20/2020
+439,Birdflower,Sadness,485.33,Purple,91,9/15/2019,8/16/2019
+440,Disc Granular Lichen,Anger,229.12,Turquoise,,8/24/2019,10/13/2019
+441,Winged Buckwheat,Disgust,648.15,Turquoise,,2/3/2020,9/2/2019
+442,Hooker's Evening Primrose,Enjoyment,394.93,Indigo,,11/27/2019,5/29/2020
+443,Upland Swampprivet,Anger,812.59,Violet,,4/11/2020,11/20/2019
+444,Buttecandle,Disgust,611.38,Violet,21,3/22/2020,7/22/2020
+445,Beaver Indian Breadroot,Anger,825.12,Green,,6/7/2020,1/10/2020
+446,Featherbells,Fear,433.33,Pink,37,8/31/2019,6/12/2020
+447,Cook's Spleenwort,Sadness,340.70,Violet,26,8/2/2020,4/5/2020
+448,Bog Orchid,Sadness,838.31,Goldenrod,,5/4/2020,11/4/2019
+449,Broadbeard Beardtongue,Sadness,756.58,Teal,,2/12/2020,8/10/2019
+450,False Pimpernel,Enjoyment,91.31,Aquamarine,,12/9/2019,1/19/2020
+451,Spotted Lady's Slipper,Disgust,657.30,Aquamarine,39,2/3/2020,10/25/2019
+452,Scarlet Hedgehog Cactus,Enjoyment,48.84,Mauv,,9/10/2019,2/24/2020
+453,Synalissa Lichen,Sadness,332.22,Orange,,3/20/2020,1/30/2020
+454,Oneside Penstemon,Disgust,41.45,Goldenrod,,7/2/2020,1/19/2020
+455,Valley Saltbush,Fear,27.80,Fuscia,51,5/10/2020,4/9/2020
+456,Imshaug's Disc Lichen,Sadness,210.93,Goldenrod,,9/24/2019,5/27/2020
+457,Toad Rush,Misc,902.84,Khaki,,3/12/2020,8/29/2019
+458,Ngaio Tree,Enjoyment,647.94,Aquamarine,,6/17/2020,2/13/2020
+459,Curly Pondweed,Misc,588.11,Maroon,70,3/24/2020,1/6/2020
+460,Yadon's Wallflower,Disgust,546.05,Khaki,16,12/27/2019,4/14/2020
+461,Spinystar,Sadness,415.21,Red,,3/28/2020,2/20/2020
+462,Ground Nama,Fear,76.01,Pink,,6/10/2020,9/10/2019
+463,Balkan Catchfly,Enjoyment,831.67,Yellow,,11/15/2019,1/29/2020
+464,Pepper,Sadness,468.39,Aquamarine,,5/7/2020,8/7/2019
+465,Trichoramalina Lichen,Disgust,325.31,Pink,93,7/26/2020,7/6/2020
+466,Radish,Anger,368.65,Yellow,,12/3/2019,9/3/2019
+467,Black Poui,Fear,84.96,Yellow,,6/29/2020,6/18/2020
+468,Governor's Plum,Enjoyment,967.84,Orange,,8/5/2019,3/20/2020
+469,Heartleaf Keckiella,Sadness,504.53,Turquoise,,5/6/2020,2/3/2020
+470,Hypnum Moss,Misc,103.68,Green,,1/20/2020,2/13/2020
+471,Santa Lucia Phacelia,Fear,66.95,Mauv,88,5/21/2020,1/20/2020
+472,Chaenothecopsis Lichen,Anger,587.21,Aquamarine,,11/22/2019,2/12/2020
+473,Coastal Cosmopolitan Bulrush,Anger,875.64,Pink,2,3/8/2020,11/1/2019
+474,Mascarene Island Leaf-flower,Anger,511.62,Aquamarine,,10/22/2019,5/4/2020
+475,Cup Lichen,Fear,939.93,Mauv,31,12/12/2019,3/6/2020
+476,Rueppell's Clover,Fear,293.32,Khaki,,7/30/2020,10/21/2019
+477,Mexican Creeping Zinnia,Misc,633.56,Khaki,,7/13/2020,6/6/2020
+478,Sterculia,Enjoyment,344.97,Aquamarine,,5/10/2020,3/12/2020
+479,Cyrtandra,Disgust,199.41,Puce,94,3/2/2020,3/21/2020
+480,Grimmia Dry Rock Moss,Enjoyment,159.15,Green,,10/2/2019,10/23/2019
+481,Dactylina Lichen,Enjoyment,677.95,Mauv,,9/2/2019,8/19/2019
+482,Washington Fan Palm,Anger,601.77,Red,71,1/6/2020,8/8/2019
+483,Island Sand Pea,Disgust,73.88,Green,21,11/13/2019,6/21/2020
+484,Sulphur Knapweed,Fear,962.92,Mauv,,11/10/2019,8/27/2019
+485,Rainbow Pink,Fear,252.16,Green,3,3/27/2020,3/21/2020
+486,Idaho Biscuitroot,Sadness,961.65,Khaki,,9/13/2019,7/20/2020
+487,James' Buckwheat,Sadness,378.06,Blue,23,7/16/2020,9/28/2019
+488,Mycoporum Lichen,Fear,787.51,Green,,1/7/2020,2/1/2020
+489,Crispleaf Buckwheat,Misc,729.12,Maroon,,4/11/2020,7/26/2020
+490,Girgensohn's Sphagnum,Disgust,624.56,Maroon,,4/24/2020,1/14/2020
+491,Monterey Spineflower,Disgust,920.89,Blue,71,9/27/2019,10/31/2019
+492,Babyslippers,Misc,724.72,Crimson,,6/21/2020,8/15/2019
+493,Anisomeridium Lichen,Fear,533.18,Violet,,2/11/2020,7/20/2020
+494,Kiwi,Anger,603.46,Pink,,6/19/2020,8/4/2019
+495,River Junction Hawthorn,Fear,36.95,Green,,7/8/2020,2/23/2020
+496,Alva Day's Pincushionplant,Sadness,157.87,Turquoise,,10/6/2019,12/31/2019
+497,Rubber Rabbitbrush,Anger,258.04,Crimson,,6/29/2020,5/31/2020
+498,Sandwort,Fear,355.28,Indigo,80,1/3/2020,1/29/2020
+499,Gray's Sedge,Disgust,691.82,Yellow,,7/1/2020,8/18/2019
+500,Badlands Mule-ears,Disgust,25.67,Maroon,74,8/27/2019,11/17/2019
