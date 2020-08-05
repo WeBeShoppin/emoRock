@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const Product = db.define('product', {
+const Rock = db.define('rock', {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -24,7 +24,7 @@ const Product = db.define('product', {
     }
   },
   price: {
-    type: Sequelize.FLOAT,
+    type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
       notEmpty: true,
@@ -36,4 +36,4 @@ const Product = db.define('product', {
   }
 })
 
-module.exports = Product
+module.exports = Rock
