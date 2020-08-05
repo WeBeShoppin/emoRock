@@ -1,5 +1,5 @@
 {
-  "name": "emoRocks",
+  "name": "emorocks",
   "version": "1.0.0",
   "description": "making friends, one rock at a time",
   "engines": {
@@ -28,19 +28,14 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --write",
-      "npm run lint-fix",
-      "git add"
-    ],
-    "*.{css,scss,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,jsx}": ["prettier --write", "npm run lint-fix", "git add"],
+    "*.{css,scss,json,md}": ["prettier --write", "git add"]
   },
   "author": "We Be Shoppin",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "axios": "^0.19.0",
     "compression": "^1.7.3",
     "connect-session-sequelize": "^6.0.0",
