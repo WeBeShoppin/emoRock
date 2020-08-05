@@ -27,7 +27,7 @@ router.get('/:rockId', async (req, res, next) => {
   }
 })
 
-router.post('/add', adminMiddleware, async (req, res, next) => {
+router.post('/add', async (req, res, next) => {
   try {
     const newRock = await Rock.create(req.body)
     res.json(newRock)
