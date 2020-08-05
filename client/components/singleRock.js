@@ -1,22 +1,25 @@
-import React, {useState, useEffect} from 'react'
-import getSingleRock from '../store'
+import React, {useEffect} from 'react'
+import {getSingleRock} from '../store/singleRock'
 import {useDispatch} from 'react-redux'
 
-function singleRock() {
-  const [rock, setRock] = useState({})
-  const dispatch = useDispatch()
+function SingleRock(props) {
+  //const [rock, setRock] = useState({})
 
-  const loadSingleRock = id => {
-    dispatch(getSingleRock(id))
-  }
+  // const rock = useSelector(state => state.SingleRock)
+  // const dispatch = useDispatch()
+  // const loadSingleRock = id => {
+  //   dispatch(getSingleRock(id))
+  // }
 
-  useEffect(id => {
-    loadSingleRock(id)
-  }, [])
+  // useEffect(id => {
+  //   loadSingleRock(id)
+  // }, [])
+
+  const {rock} = props
 
   return (
     <div>
-      <img src={rock.imgUrl} />
+      {/* <img src={rock.imgUrl} /> */}
       <h1>{rock.name}</h1>
       <p>
         {rock.price} {rock.category}
@@ -25,4 +28,4 @@ function singleRock() {
   )
 }
 
-export default singleRock
+export default SingleRock
