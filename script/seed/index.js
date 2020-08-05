@@ -1,6 +1,6 @@
-const users = require('./dummyUsers')
-const products = require('./dummyProducts')
-const orders = require('./dummyOrders')
+const users = require('./users.json')
+const products = require('./products.json')
+const orders = require('./orders.json')
 
 module.exports = {
   users,
