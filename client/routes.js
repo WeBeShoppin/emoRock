@@ -1,6 +1,13 @@
 import React, {useEffect} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
-import {Login, Signup, UserHome, SingleRock, RockList, Landing} from './components'
+import {
+  Login,
+  Signup,
+  UserHome,
+  SingleRock,
+  RockList,
+  Landing
+} from './components'
 import {me} from './store'
 import {useSelector, useDispatch} from 'react-redux'
 
@@ -29,7 +36,7 @@ const Routes = () => {
       {isLoggedIn && (
         <Switch>
           {/* Routes placed here are only available after logging in */}
-          <Route path="/home" component={UserHome} />
+          <Route path="/home" component={Landing} />
         </Switch>
       )}
       {/* Displays our Landing component as a fallback */}
