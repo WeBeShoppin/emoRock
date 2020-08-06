@@ -1,6 +1,7 @@
 const User = require('./user')
 const Rock = require('./rock')
 const Order = require('./order')
+const Cart = require('./cart')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -19,10 +20,11 @@ const Order = require('./order')
 User.hasMany(Order)
 Order.belongsTo(User)
 Order.hasMany(Rock)
-Rock.belongsToMany(Order, {through: 'cart'})
+Rock.belongsToMany(Order, {through: Cart})
 
 module.exports = {
   User,
   Rock,
-  Order
+  Order,
+  Cart
 }

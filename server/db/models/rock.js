@@ -9,6 +9,15 @@ const Rock = db.define('rock', {
       notEmpty: true
     }
   },
+  summary: Sequelize.STRING,
+  description: Sequelize.TEXT,
+  price: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
   category: {
     type: Sequelize.ENUM(
       'Fear',
@@ -23,17 +32,9 @@ const Rock = db.define('rock', {
       notEmpty: true
     }
   },
-  price: {
-    type: Sequelize.INTEGER,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-      isFloat: true
-    }
-  },
-  color: {
-    type: Sequelize.STRING
-  }
+  color: Sequelize.STRING,
+  inventory: Sequelize.INTEGER,
+  status: Sequelize.ENUM('inStock', 'outOfStock', 'lowSupply')
 })
 
 module.exports = Rock

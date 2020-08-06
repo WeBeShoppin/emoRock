@@ -5,7 +5,7 @@ const Order = db.define('order', {
   orderNumber: {
     type: Sequelize.INTEGER
   },
-  cartStatus: {
+  status: {
     type: Sequelize.ENUM(
       'inCart',
       'checkout',
@@ -13,7 +13,12 @@ const Order = db.define('order', {
       'pending',
       'shipped'
     )
-  }
+  },
+  subtotal: Sequelize.INTEGER,
+  tax: Sequelize.INTEGER,
+  shipping: Sequelize.INTEGER,
+  discount: Sequelize.INTEGER,
+  grandTotal: Sequelize.INTEGER
 })
 
 module.exports = Order
