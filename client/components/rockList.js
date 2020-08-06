@@ -5,7 +5,6 @@ import SingleRock from './singleRock'
 import {Link} from 'react-router-dom'
 
 function RockList() {
-  //const [rocks, setRocks] = useState([])
   const rocks = useSelector(state => state.rocks)
   const dispatch = useDispatch()
 

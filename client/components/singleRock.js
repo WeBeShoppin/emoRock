@@ -1,29 +1,27 @@
 import React, {useEffect} from 'react'
 import {getSingleRock} from '../store/singleRock'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 
 function SingleRock(props) {
-  //const [rock, setRock] = useState({})
+  const rock = useSelector(state => state.singleRock)
+  const dispatch = useDispatch()
+  const loadSingleRock = id => {
+    dispatch(getSingleRock(id))
+  }
 
-  // const rock = useSelector(state => state.SingleRock)
-  // const dispatch = useDispatch()
-  // const loadSingleRock = id => {
-  //   dispatch(getSingleRock(id))
-  // }
-
-  // useEffect(id => {
-  //   loadSingleRock(id)
-  // }, [])
-
-  const {rock} = props
+  useEffect(
+    () => {
+      loadSingleRock(props.match.params.rockId)
+    },
+    [props.match.params.rockId]
+  )
 
   return (
-    <div>
-      {/* <img src={rock.imgUrl} /> */}
-      <h1>{rock.name}</h1>
-      <p>
-        {rock.price} {rock.category}
-      </p>
+    <div id="singleRock">
+      {/* <img src={rock.imageUrl} /> */}
+      <h1>Name: {rock.name}</h1>
+      <p>Price: {rock.price}</p>
+      <p>Category: {rock.category}</p>
     </div>
   )
 }
