@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 function RockList() {
   const rocks = useSelector(state => state.rocks)
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useLocalStorage('cart', [])
   const dispatch = useDispatch()
 
   const loadAllRocks = () => {
@@ -14,12 +14,40 @@ function RockList() {
   }
 
   function addToCart(product) {
-    if (cart.length <= 0) setCart([...cart, product])
+    setCart([...cart, product])
+    console.log('cart', cart)
+    // let newCart = JSON.parse(window.localStorage.cart)
+    console.log('parsed Cart', JSON.parse(window.localStorage.cart))
   }
 
   useEffect(() => {
     loadAllRocks()
   }, [])
+
+  function useLocalStorage(key, initialValue) {
+    const [storedValue, setStoredValue] = useState(() => {
+      try {
+        const item = window.localStorage.getItem(key)
+        return item ? JSON.parse(item) : initialValue
+      } catch (error) {
+        console.log(error)
+        return initialValue
+      }
+    })
+
+    const setValue = value => {
+      try {
+        const valueToStore =
+          value instanceof Function ? value(storedValue) : value
+        setStoredValue(valueToStore)
+        window.localStorage.setItem(key, JSON.stringify(valueToStore))
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    return [storedValue, setValue]
+  }
 
   return (
     <div className="rockList">
@@ -28,7 +56,7 @@ function RockList() {
           <Link to={`/rocks/${rock.id}`} component={SingleRock}>
             <p className="introduction">Rock name: {rock.name}</p>
           </Link>
-          <button type="button" onClick={addToCart}>
+          <button type="button" onClick={() => addToCart(rock)}>
             Add To Cart
           </button>
         </div>
