@@ -19,17 +19,11 @@ function RockList() {
   return (
     <div className="rockList">
       {rocks.map(rock => (
-        <Link to={`/rocks/${rock.id}`} key={rock.id}>
-          <SingleRock rock={rock} />
-        </Link>
-        // <div key={rock.id}>
-        //   <h1>single Rock</h1>
-        //   <Link to={`/rocks/${rock.id}`} component={SingleRock}>
-        //     {/* <img src={rock.imageUrl} /> */}
-        //     <p>{rock.name}</p>
-        //     <p>{rock.price}</p>
-        //   </Link>
-        // </div>
+        <div className="eachRock" key={rock.id}>
+          <Link to={`/rocks/${rock.id}`} component={SingleRock}>
+            <p className="introduction">Rock name: {rock.name}</p>
+          </Link>
+        </div>
       ))}
     </div>
   )
