@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import {useSelector, useDispatch} from 'react-redux'
-import RockList from './rockList'
 
 const Navbar = () => {
   const isLoggedIn = useSelector(state => !!state.user.id)
