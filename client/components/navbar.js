@@ -12,12 +12,14 @@ const Navbar = () => {
 
   return (
     <div>
-      <h1>emoRocks</h1>
       <nav>
         {isLoggedIn ? (
           <div className="nav">
             {/* The navbar will show these links after you log in */}
-            <Link to="/rocks">Shop Rocks!!</Link>
+            <div id="logo">
+              <img src="/EmoRocksLogo.png" height="100px" />
+            </div>
+            <Link to="/rocks">Shop All Rocks!!</Link>
             <Link to="/home">Home</Link>
             <Link to="/myAccount">MyAccount</Link>
             <a href="#" onClick={handleClick}>
@@ -29,7 +31,10 @@ const Navbar = () => {
         ) : (
           <div className="nav">
             {/* The navbar will show these links before you log in */}
-            <Link to="/rocks">Shop Rocks!!</Link>
+            <div id="logo">
+              <img src="/EmoRocksLogo.png" height="100px" />
+            </div>
+            <Link to="/rocks">Shop All Rocks!!</Link>
             <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link>
             <Link to="/cart">Cart</Link>
