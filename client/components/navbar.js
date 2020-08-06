@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 import {useSelector, useDispatch} from 'react-redux'
+import RockList from './rockList'
 
 const Navbar = () => {
   const isLoggedIn = useSelector(state => !!state.user.id)
@@ -18,6 +19,7 @@ const Navbar = () => {
           <div>
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
+            <Link to="/rocks">Rocks</Link>
             <Link to="/myAccount">MyAccount</Link>
             <a href="#" onClick={handleClick}>
               Logout
@@ -28,6 +30,7 @@ const Navbar = () => {
         ) : (
           <div>
             {/* The navbar will show these links before you log in */}
+            <Link to="/rocks">Rocks</Link>
             <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link>
             <Link to="/cart">Cart</Link>
