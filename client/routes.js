@@ -38,7 +38,7 @@ const Routes = () => {
       {isLoggedIn && (
         <Switch>
           {/* Routes placed here are only available after logging in */}
-          <Route path="/home" component={UserHome} />
+          <Route path="/home" component={Landing} />
         </Switch>
       )}
       {/* Displays our Landing component as a fallback */}
