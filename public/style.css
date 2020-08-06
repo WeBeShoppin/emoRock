@@ -30,3 +30,15 @@ footer {
   color: white;
   text-align: center;
 }
+
+.nav {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr 1fr;
+  background-color: black;
+  color: white;
+}
+
+.rockList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

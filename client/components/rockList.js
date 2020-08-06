@@ -20,8 +20,8 @@ function RockList() {
   return (
     <div className="rockList">
       {rocks.map(rock => (
-        <Link to={`/rocks/${rock.id}`}>
-          <SingleRock key={rock.id} rock={rock} />
+        <Link to={`/rocks/${rock.id}`} key={rock.id}>
+          <SingleRock rock={rock} />
         </Link>
         // <div key={rock.id}>
         //   <h1>single Rock</h1>
