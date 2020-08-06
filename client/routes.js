@@ -1,13 +1,6 @@
 import React, {useEffect} from 'react'
 import {withRouter, Route, Switch} from 'react-router-dom'
-import {
-  Login,
-  Signup,
-  UserHome,
-  RockList,
-  SingleRock,
-  Landing
-} from './components'
+import {Login, Signup, UserHome, SingleRock, RockList, Landing} from './components'
 import {me} from './store'
 import {useSelector, useDispatch} from 'react-redux'
 
@@ -32,7 +25,7 @@ const Routes = () => {
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route exact path="/rocks" component={RockList} />
-      <Route exact path="/rocks/:rockId" component={SingleRock} />
+      <Route path="/rocks/:rockId" component={SingleRock} />
       {isLoggedIn && (
         <Switch>
           {/* Routes placed here are only available after logging in */}

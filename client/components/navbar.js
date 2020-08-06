@@ -15,8 +15,9 @@ const Navbar = () => {
       <h1>emoRocks</h1>
       <nav>
         {isLoggedIn ? (
-          <div>
+          <div className="nav">
             {/* The navbar will show these links after you log in */}
+            <Link to="/rocks">Shop Rocks!!</Link>
             <Link to="/home">Home</Link>
             <Link to="/rocks">Rocks</Link>
             <Link to="/myAccount">MyAccount</Link>
@@ -27,9 +28,9 @@ const Navbar = () => {
             <Link to="/cart">Cart</Link>
           </div>
         ) : (
-          <div>
+          <div className="nav">
             {/* The navbar will show these links before you log in */}
-            <Link to="/rocks">Rocks</Link>
+            <Link to="/rocks">Shop Rocks!!</Link>
             <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link>
             <Link to="/cart">Cart</Link>
