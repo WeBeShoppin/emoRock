@@ -17,10 +17,11 @@ const Navbar = () => {
           <div className="nav">
             {/* The navbar will show these links after you log in */}
             <div id="logo">
-              <img src="/EmoRocksLogo.png" height="100px" />
+              <Link to="/home">
+                <img src="/EmoRocksLogo.png" height="100px" />
+              </Link>
             </div>
             <Link to="/rocks">Shop All Rocks!!</Link>
-            <Link to="/home">Home</Link>
             <Link to="/myAccount">MyAccount</Link>
             <a href="#" onClick={handleClick}>
               Logout
@@ -32,7 +33,9 @@ const Navbar = () => {
           <div className="nav">
             {/* The navbar will show these links before you log in */}
             <div id="logo">
-              <img src="/EmoRocksLogo.png" height="100px" />
+              <Link to="/home">
+                <img src="/EmoRocksLogo.png" height="100px" />
+              </Link>
             </div>
             <Link to="/rocks">Shop All Rocks!!</Link>
             <Link to="/login">Login</Link>
