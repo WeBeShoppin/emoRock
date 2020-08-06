@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Navbar, Footer, RockList} from './components'
+import {Navbar, Footer, RockCarousel} from './components'
 import Routes from './routes'
 
 const App = () => {
@@ -8,6 +8,7 @@ const App = () => {
     <div>
       <Navbar />
       <Routes />
+      <RockCarousel />
       <footer>
         <Footer />
       </footer>
