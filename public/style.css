@@ -38,6 +38,7 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
+  margin-top: 20px;
 }
 
 .nav {
@@ -147,6 +148,22 @@ button {
   font-size: 16px;
   color: #43484d;
 }
+#bill {
+  border: 3px solid black;
+  width: 20%;
+  padding: 10px;
+  /*   position: fixed;
+  right: 10%; */
+}
+
+#checkoutDiv {
+  margin-bottom: 100px;
+}
+
+#confirmation {
+  text-align: center;
+}
+
 #form {
   display: block;
 }
