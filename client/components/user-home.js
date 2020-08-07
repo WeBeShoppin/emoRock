@@ -21,7 +21,12 @@ export const UserHome = () => {
 
   return (
     <div>
-      <h3>Welcome, {user.email}</h3>
+      <div>
+        <h3>Welcome, {user.firstName}!</h3>
+      </div>
+      <div>Link goes here for user to VIEW their account details</div>
+      <div>Link goes here for user to EDIT their account details</div>
+      <div>Link goes here for user to view history (?)</div>
     </div>
   )
 }
