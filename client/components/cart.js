@@ -10,26 +10,50 @@ function Cart() {
     cart = JSON.parse(window.localStorage.cart)
   }
 
-  function removeFromCart(itemId) {
+  function minusItem(itemId) {
+    return null
+  }
+
+  function deleteItem(itemId) {
     return null
   }
 
   return (
-    <div>
-      <ul>
-        {cart.map(item => (
-          <div key={item.id}>
-            <li>
-              Name: {item.name} --- Qty: {item.qty}
-              <span>
-                <button type="button" onClick={() => removeFromCart(item.id)}>
-                  X
-                </button>
-              </span>
-            </li>
+    <div className="shopping-cart">
+      <div className="shopping-title">Your Cart</div>
+      {cart.map(item => (
+        <div className="item" key={item.id}>
+          <div className="buttons">
+            <button
+              className="delete-btn"
+              type="button"
+              onClick={() => deleteItem(item.id)}
+            >
+              X
+            </button>
           </div>
-        ))}
-      </ul>
+
+          <div className="image">
+            <img src="https://cdn.shoplightspeed.com/shops/623692/files/15032482/156x230x2/igneous-theory-pet-rock-craft-kit.jpg" />
+          </div>
+
+          <div className="description">
+            <span>{item.summary}</span>
+            <span>{item.description}</span>
+          </div>
+
+          <div className="quantity">
+            <button className="plus-btn" type="button">
+              <img src="https://www.svgrepo.com/show/135110/plus.svg" />
+            </button>
+            <input type="text" name="name" value={item.qty} />
+            <button className="minus-btn" type="button">
+              <img src="https://www.svgrepo.com/show/217/minus.svg" />
+            </button>
+          </div>
+          <div className="total-price">Total: 0</div>
+        </div>
+      ))}
     </div>
   )
 }
