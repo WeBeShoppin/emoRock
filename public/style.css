@@ -63,4 +63,7 @@ footer {
 
 #confirmation {
   text-align: center;
+
+#form {
+  display: block;
 }

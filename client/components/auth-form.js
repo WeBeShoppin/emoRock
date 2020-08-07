@@ -68,12 +68,13 @@ const SignUpForm = props => {
   const {name, displayName, handleSubmit, error} = props
 
   return (
-    <div>
+    <div className="form">
       <form onSubmit={handleSubmit} name={name}>
         <div>
           <label htmlFor="firstName">
             <small>First Name *</small>
           </label>
+          <br />
           <input name="firstName" type="text" />
         </div>
         <div>
@@ -86,24 +87,28 @@ const SignUpForm = props => {
           <label htmlFor="email">
             <small>Email *</small>
           </label>
+          <br />
           <input name="email" type="text" />
         </div>
         <div>
           <label htmlFor="password">
             <small>Password *</small>
           </label>
+          <br />
           <input name="password" type="password" />
         </div>
         <div>
           <label htmlFor="phone">
             <small>Phone</small>
           </label>
+          <br />
           <input name="phone" type="text" />
         </div>
         <div>
           <label htmlFor="address">
             <small>Address</small>
           </label>
+          <br />
           <input name="address" type="text" />
         </div>
         <div>
