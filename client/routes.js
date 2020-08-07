@@ -3,11 +3,13 @@ import {withRouter, Route, Switch} from 'react-router-dom'
 import {
   Login,
   Signup,
-  UserHome,
+  //UserHome,
   SingleRock,
   RockList,
   Landing,
-  Cart
+  Cart,
+  Checkout,
+  Confirmation
 } from './components'
 import {me} from './store'
 import {useSelector, useDispatch} from 'react-redux'
@@ -34,7 +36,9 @@ const Routes = () => {
       <Route path="/signup" component={Signup} />
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
+      <Route path="/checkout" component={Checkout} />
       <Route path="/cart" component={Cart} />
+      <Route path="/confirmation" component={Confirmation} />
       {/* Displays our Landing component as a fallback */}
       <Route component={Landing} />
       {isLoggedIn && (
