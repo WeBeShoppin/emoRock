@@ -35,14 +35,14 @@ const Routes = () => {
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
       <Route path="/cart" component={Cart} />
+      {/* Displays our Landing component as a fallback */}
+      <Route component={Landing} />
       {isLoggedIn && (
         <Switch>
           {/* Routes placed here are only available after logging in */}
           <Route path="/home" component={Landing} />
         </Switch>
       )}
-      {/* Displays our Landing component as a fallback */}
-      <Route component={Landing} />
     </Switch>
   )
 }
