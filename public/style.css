@@ -47,3 +47,7 @@ footer {
 #logo {
   text-align: center;
 }
+
+#form {
+  display: block;
+}
