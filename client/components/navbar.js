@@ -22,7 +22,7 @@ const Navbar = () => {
               </Link>
             </div>
             <Link to="/rocks">Shop All Rocks!!</Link>
-            <Link to="/myAccount">MyAccount</Link>
+            <Link to="/myAccount/{state.user.id}">MyAccount</Link>
             <a href="#" onClick={handleClick}>
               Logout
             </a>

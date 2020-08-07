@@ -34,6 +34,7 @@ const Routes = () => {
       {/* Routes placed here are available to all visitors */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
+      <Route path="/myaccount/:userId" component={UserHome} />
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
       <Route path="/checkout" component={Checkout} />

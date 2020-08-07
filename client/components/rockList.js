@@ -13,11 +13,22 @@ function RockList() {
     dispatch(getAllRocks())
   }
 
-  function addToCart(product) {
-    setCart([...cart, product])
-    console.log('cart', cart)
-    // let newCart = JSON.parse(window.localStorage.cart)
-    console.log('parsed Cart', JSON.parse(window.localStorage.cart))
+  function addToCart(rock) {
+    // if qty property does not exist then the item wasn't added to cart yet
+    let newRock = {}
+    if (!rock.qty || rock.qty === 0) {
+      newRock = {...rock, qty: 1}
+    }
+    // find item in cart if it already exists
+    let addedItem = cart.find(r => r.id === newRock.id)
+    if (addedItem) {
+      //filter out the item in the cart so we can add it with the updated qty amount
+      let cartWithoutItem = cart.filter(r => r.id !== addedItem.id)
+      addedItem.qty += 1
+      setCart([...cartWithoutItem, addedItem])
+    } else {
+      setCart([...cart, newRock])
+    }
   }
 
   useEffect(() => {
