@@ -11,7 +11,6 @@ import {
 } from './components'
 import {me} from './store'
 import {useSelector, useDispatch} from 'react-redux'
-import SingleUser from './components/singleUser'
 
 /**
  * COMPONENT
@@ -33,7 +32,7 @@ const Routes = () => {
       {/* Routes placed here are available to all visitors */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
-      <Route path="/myaccount/:userId" component={SingleUser} />
+      <Route path="/myaccount/:userId" component={UserHome} />
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
       <Route path="/cart" component={Cart} />
