@@ -9,6 +9,7 @@ const Navbar = () => {
   const handleClick = () => {
     dispatch(logout())
   }
+  // const userId = useSelector(state => state.user.id)
 
   return (
     <div>
@@ -22,7 +23,7 @@ const Navbar = () => {
               </Link>
             </div>
             <Link to="/rocks">Shop All Rocks!!</Link>
-            <Link to="/myAccount/{state.user.id}">MyAccount</Link>
+            <Link to="/myAccount">My Account</Link>
             <a href="#" onClick={handleClick}>
               Logout
             </a>

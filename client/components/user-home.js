@@ -10,7 +10,6 @@ import AdminTools from './adminTools'
 
 export const UserHome = () => {
   const dispatch = useDispatch()
-
   const loadUser = () => {
     dispatch(me())
   }
@@ -20,6 +19,7 @@ export const UserHome = () => {
   }, [])
 
   const user = useSelector(state => state.user)
+  const isAdmin = useSelector(state => state.user.isAdmin)
 
   return (
     <div>
@@ -30,9 +30,7 @@ export const UserHome = () => {
         <h3>Account Info:</h3>
         <SingleUser />
       </div>
-      {/* <div>Link goes here for user to EDIT their account details</div> */}
-      {/* <div>Link goes here for user to view history (?)</div> */}
-      <AdminTools />
+      <div>{isAdmin && <AdminTools />}</div>
     </div>
   )
 }

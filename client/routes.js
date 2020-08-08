@@ -7,7 +7,8 @@ import {
   SingleRock,
   RockList,
   Landing,
-  Cart
+  Cart,
+  UserList
 } from './components'
 import {me} from './store'
 import {useSelector, useDispatch} from 'react-redux'
@@ -32,10 +33,12 @@ const Routes = () => {
       {/* Routes placed here are available to all visitors */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
-      <Route path="/myaccount/:userId" component={UserHome} />
+
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
       <Route path="/cart" component={Cart} />
+      <Route path="/myAccount" component={UserHome} />
+      <Route path="/admin/users" component={UserList} />
       {/* Displays our Landing component as a fallback */}
       <Route component={Landing} />
       {isLoggedIn && (

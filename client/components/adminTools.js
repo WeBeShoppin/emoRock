@@ -1,6 +1,7 @@
 import React from 'react'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
+// import UserList from './userList'
 
 const AdminTools = () => {
   const isLoggedIn = useSelector(state => !!state.user.id)
@@ -8,14 +9,11 @@ const AdminTools = () => {
 
   return (
     <div>
-      {isLoggedIn && isAdmin ? (
+      {isAdmin && (
         <div>
-          <p>Link to user list</p>
+          <h3>Administrator Tools:</h3>
+          <Link to="../admin/users">All Users</Link>
           <p>Link to product tools</p>
-        </div>
-      ) : (
-        <div>
-          <p>..</p>
         </div>
       )}
     </div>
