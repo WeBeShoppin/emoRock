@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {me} from '../store/user'
 import SingleUser from './singleUser'
+import AdminTools from './adminTools'
 
 /**
  * COMPONENT
@@ -23,14 +24,15 @@ export const UserHome = () => {
   return (
     <div>
       <div>
-        <h3>Welcome, {user.firstName}!</h3>
+        <h1>Welcome, {user.firstName}!</h1>
       </div>
       <div>
         <h3>Account Info:</h3>
         <SingleUser />
       </div>
-      <div>Link goes here for user to EDIT their account details</div>
-      <div>Link goes here for user to view history (?)</div>
+      {/* <div>Link goes here for user to EDIT their account details</div> */}
+      {/* <div>Link goes here for user to view history (?)</div> */}
+      <AdminTools />
     </div>
   )
 }
