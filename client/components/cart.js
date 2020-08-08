@@ -49,7 +49,7 @@ function Cart() {
             </button>
             <input type="text" name="name" value={item.qty} />
             <button className="minus-btn" type="button">
-              <img src="https://www.svgrepo.com/show/217/minus.svg" />
+              <img src="https://www.svgrepo.com/show/201922/minus.svg" />
             </button>
           </div>
           <div className="total-price">Total: 0</div>
