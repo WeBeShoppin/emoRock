@@ -3,7 +3,7 @@ import {withRouter, Route, Switch} from 'react-router-dom'
 import {
   Login,
   Signup,
-  //UserHome,
+  UserHome,
   SingleRock,
   RockList,
   Landing,
