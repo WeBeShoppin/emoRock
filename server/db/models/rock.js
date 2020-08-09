@@ -34,7 +34,13 @@ const Rock = db.define('rock', {
   },
   color: Sequelize.STRING,
   inventory: Sequelize.INTEGER,
-  status: Sequelize.ENUM('inStock', 'outOfStock', 'lowSupply')
+  status: {
+    type: Sequelize.ENUM('inStock', 'outOfStock', 'lowSupply'),
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  }
 })
 
 module.exports = Rock

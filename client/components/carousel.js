@@ -10,11 +10,10 @@ const RockCarousel = () => {
 
   return (
     <div className="carousel">
-      <Carousel>
+      <Carousel enableAutoPlay="true" autoPlaySpeed={2000}>
         {items.map(item => (
           <div key={item.id}>
             <img src={item.imageUrl} />
-            <p>{item.title}</p>
           </div>
         ))}
       </Carousel>

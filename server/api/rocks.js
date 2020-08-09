@@ -21,7 +21,11 @@ router.get('/', async (req, res, next) => {
 router.get('/:rockId', async (req, res, next) => {
   try {
     const rock = await Rock.findByPk(req.params.rockId)
-    res.json(rock)
+    if (rock) {
+      res.json(rock)
+    } else {
+      res.status(404).send('The rock is not found')
+    }
   } catch (error) {
     next(error)
   }
