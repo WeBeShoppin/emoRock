@@ -8,6 +8,8 @@ import {
   RockList,
   Landing,
   Cart,
+  UserList,
+  UserHome,
   Checkout,
   Confirmation
 } from './components'
@@ -34,11 +36,12 @@ const Routes = () => {
       {/* Routes placed here are available to all visitors */}
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
-      {/* <Route path="/myaccount/:userId" component={UserHome} /> */}
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/cart" component={Cart} />
+      <Route path="/myAccount" component={UserHome} />
+      <Route path="/admin/users" component={UserList} />
       <Route path="/confirmation" component={Confirmation} />
       {/* Displays our Landing component as a fallback */}
       <Route component={Landing} />
