@@ -5,6 +5,7 @@ import {useSelector, useDispatch} from 'react-redux'
 
 const Navbar = () => {
   const isLoggedIn = useSelector(state => !!state.user.id)
+  const cartQty = useSelector(state => state.cart.qty)
   const dispatch = useDispatch()
   const handleClick = () => {
     dispatch(logout())
@@ -40,7 +41,7 @@ const Navbar = () => {
             <Link to="/rocks">Shop All Rocks!!</Link>
             <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart {cartQty}</Link>
           </div>
         )}
       </nav>
