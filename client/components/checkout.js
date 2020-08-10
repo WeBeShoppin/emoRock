@@ -12,8 +12,7 @@ function Checkout() {
   let tax = 1.08875
   let shipping = 9.99
   let grandTotal = Math.round(subtotal * tax) / 100 + shipping
-  console.log('subtotal', subtotal)
-  console.log('grand total', grandTotal)
+
   return (
     <div id="checkoutDiv">
       <h1>Checkout</h1>
