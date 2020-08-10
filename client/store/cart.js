@@ -1,68 +1,147 @@
 // import axios from 'axios';
 
-// /**
-//  * ACTION TYPES
-//  */
-// const ADD_TO_CART = 'ADD_TO_CART';
+// ACTION TYPES
+const GET_CART = 'GET_CART'
+const ADD_TO_CART = 'ADD_TO_CART'
+const DELETE_ITEM = 'DELETE_ITEM'
+const DECREMENT_ITEM_QTY = 'DECREMENT_ITEM_QTY'
 
-// /**
-//  * INITIAL STATE
-//  */
-// const initialState = {
-//   rocks: [],
-//   addedRock: [],
-//   totalPrice: 0
-// };
+// ACTION CREATORS
+const getCart = cart => ({
+  type: GET_CART,
+  cart
+})
 
-// /**
-//  * ACTION CREATORS
-//  */
+const addToCart = items => ({
+  type: ADD_TO_CART,
+  items
+})
 
-// const addToCart = (singleRock) => ({
-//   type: ADD_TO_CART,
-//   singleRock
-// });
+const deleteItem = cartWithOutItem => ({
+  type: DELETE_ITEM,
+  cartWithOutItem
+})
 
-// /**
-//  * THUNK CREATORS
-//  */
+const decrementItemQty = items => ({
+  type: DECREMENT_ITEM_QTY,
+  items
+})
 
-// export const getCart = (id) => {
-//   return async (dispatch) => {
-//     try {
-//       const {data} = await axios.get(`/api/rocks/${id}`);
-//       dispatch(addToCart(data));
-//     } catch (err) {
-//       console.error(err);
-//     }
-//   };
-// };
+// THUNK CREATORS
+export const getCartFromStorage = () => dispatch => {
+  try {
+    let cart = localStorage.getItem('cart')
+    if (cart) {
+      cart = JSON.parse(cart)
+    } else {
+      cart = []
+    }
+    dispatch(getCart(cart))
+  } catch (err) {
+    console.error(err.message)
+  }
+}
 
-// /**
-//  * REDUCER
-//  */
+export const addItemToLocalStorage = rock => (dispatch, getState) => {
+  try {
+    let newRock = {}
+    if (!rock.qty || rock.qty === 0) {
+      newRock = {...rock, qty: 1}
+    }
 
-// export default function(state = initialState, action) {
-//   switch (action.type) {
-//     case ADD_TO_CART:
-//       let newRock = state.rocks.find((rock) => rock.id === action.id);
-//       let existingRock = state.addedRock.find((rock) => rock.id === action.id);
-//       if (existingRock) {
-//         newRock.quantity += 1;
-//         return {
-//           ...state,
-//           totalPrice: state.totalPrice + newRock.price
-//         };
-//       } else {
-//         newRock.quantity = 1;
-//         let newTotalPrice = state.totalPrice + newRock.price
+    let cart = getState().cart.items
+    let addedItem = cart.find(r => r.id === rock.id)
+    let addedItemIndex = cart.indexOf(r => r.id === rock.id)
+    if (addedItem) {
+      addedItem.qty += 1
+      cart[addedItemIndex] = addedItem
+      localStorage.setItem('cart', JSON.stringify(cart))
+      dispatch(addToCart(cart))
+    } else {
+      let newCart = [...cart]
+      newCart.push(newRock)
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      dispatch(addToCart(newCart))
+    }
+  } catch (err) {
+    console.error(err.message)
+  }
+}
 
-//         return {
-//           ...state,
-//           addedRock: [...state.addedRock, newRock]
-//         }
-//       }
-//     default:
-//       return state;
-//   }
-// }
+export const deleteItemFromLocalStorage = itemId => (dispatch, getState) => {
+  try {
+    const cart = getState().cart.items
+    let cartWithoutItem = cart.filter(item => item.id !== itemId)
+    localStorage.setItem('cart', JSON.stringify(cartWithoutItem))
+    dispatch(deleteItem(cartWithoutItem))
+  } catch (err) {
+    console.error(err.message)
+  }
+}
+
+export const decreaseItemQty = item => (dispatch, getState) => {
+  try {
+    let cart = getState().cart.items
+    let itemIndex = cart.indexOf(r => r.id === item.id)
+    if (item.qty > 1) {
+      item.qty -= 1
+      cart[itemIndex] = item
+      localStorage.setItem('cart', JSON.stringify(cart))
+      dispatch(decrementItemQty(cart))
+    } else {
+      let newCart = cart.filter(r => r.id !== item.id)
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      dispatch(decrementItemQty(newCart))
+    }
+  } catch (err) {
+    console.error(err.message)
+  }
+}
+
+// INITIAL STATE
+const initialState = {
+  items: [],
+  total: 0
+}
+
+// HELPER FUNCTION
+
+const totalPrice = cartItems => {
+  return cartItems.reduce((sum, p) => sum + p.price * p.qty, 0)
+}
+
+// REDUCER
+export default function(state = initialState, action) {
+  switch (action.type) {
+    case GET_CART:
+      let cartTotal = totalPrice(action.cart)
+      return {
+        ...state,
+        items: action.cart,
+        total: cartTotal / 100
+      }
+    case ADD_TO_CART:
+      let addedTotal = totalPrice(action.items)
+      return {
+        ...state,
+        items: action.items,
+        total: addedTotal / 100
+      }
+    case DELETE_ITEM:
+      let deletedTotal = totalPrice(action.cartWithOutItem)
+      return {
+        ...state,
+        items: action.cartWithOutItem,
+        total: deletedTotal / 100
+      }
+    case DECREMENT_ITEM_QTY:
+      let decreasedTotal = totalPrice(action.items)
+      return {
+        ...state,
+        items: action.items,
+        total: decreasedTotal / 100
+      }
+    default:
+      return state
+  }
+}

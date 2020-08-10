@@ -26,17 +26,13 @@ router.get('/', async (req, res, next) => {
 router.get('/:userId', async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.userId)
-    res.json(user)
-  } catch (error) {
-    next(error)
+
+    if (user) {
+      res.json(user)
+    } else {
+      res.status(404).send('The user is not found')
+    }
+  } catch (err) {
+    next(err)
   }
 })
-
-// router.post('/add', adminMiddleware, async (req, res, next) => {
-//   try {
-//     const newUser = await User.create(req.body)
-//     res.json(newUser)
-//   } catch (error) {
-//     next(error)
-//   }
-// })

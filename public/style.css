@@ -101,7 +101,7 @@ footer {
   margin-right: 60px;
   margin-left: 60px;
   padding-left: 10px;
-  width: 150px;
+  width: 350px;
 }
 
 .description span {
@@ -113,6 +113,7 @@ footer {
 
 .description span:first-child {
   margin-bottom: 5px;
+  color: goldenrod;
 }
 .description span:last-child {
   font-weight: 300;
@@ -127,8 +128,8 @@ footer {
 .quantity input {
   border: none;
   text-align: center;
-  width: px;
-  font-size: 16px;
+  width: 16px;
+  font-size: 15px;
   color: #43484d;
   font-weight: 300;
 }
