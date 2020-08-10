@@ -116,8 +116,8 @@ describe('Rock routes', () => {
     })
 
     // This one should fail with a 500 because we don't set the article.content
-    it('does not create a new rock without price', () => {
-      return agent
+    it('does not create a new rock without price', async () => {
+      await agent
         .post('/api/rocks/add')
         .send({
           id: 2,
