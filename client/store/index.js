@@ -7,8 +7,9 @@ import users from './users'
 import singleRock from './singleRock'
 import rocks from './rocks'
 import cart from './cart'
+import orders from './orders'
 
-const reducer = combineReducers({user, users, singleRock, rocks, cart})
+const reducer = combineReducers({user, users, singleRock, rocks, cart, orders})
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
 )

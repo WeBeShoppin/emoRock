@@ -1,73 +1,68 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {newOrder} from '../store/orders'
+import {useDispatch} from 'react-redux'
 
-export default class CheckoutForm extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: ''
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+//need to add user (or guest) and items in cart to database
+
+export default function CheckoutForm(props) {
+  const {subtotal, tax, shipping, grandTotal, cart} = props
+  let orderObj = {
+    subtotal: subtotal * 100,
+    tax: tax * 100000,
+    shipping: shipping * 100,
+    grandTotal: Math.round(grandTotal * 100),
+    status: 'confirmed'
+  }
+  const dispatch = useDispatch()
+
+  function handleChange() {
+    console.log(props)
   }
 
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+  function handleSubmit(e) {
+    e.preventDefault()
+    //const firstName = evt.target.firstName.value
+    console.log(props)
+    dispatch(newOrder(orderObj))
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
-    console.log(this.state)
-    this.setState({
-      firstName: '',
-      lastName: '',
-      address: '',
-      phone: ''
-    })
-  }
-
-  render() {
-    return (
-      <div id="orderForm">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            type="text"
-            name="firstName"
-            value={this.state.firstName}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            type="text"
-            name="lastName"
-            value={this.state.lastName}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="address">Address:</label>
-          <input
-            type="text"
-            name="address"
-            value={this.state.address}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="phone">Phone Number:</label>
-          <input
-            type="text"
-            name="phone"
-            value={this.state.phone}
-            onChange={this.handleChange}
-          />
-          <Link to="/confirmation">
-            <button type="submit">Place Order</button>
-          </Link>
-        </form>
-      </div>
-    )
-  }
+  return (
+    <div id="orderForm">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="firstName">First Name:</label>
+        <input
+          type="text"
+          name="firstName"
+          //value={state.lastName}
+          onChange={handleChange}
+        />
+        <label htmlFor="lastName">Last Name:</label>
+        <input
+          type="text"
+          name="lastName"
+          //value={state.lastName}
+          onChange={handleChange}
+        />
+        <label htmlFor="address">Address:</label>
+        <input
+          type="text"
+          name="address"
+          //value={state.address}
+          onChange={handleChange}
+        />
+        <label htmlFor="phone">Phone Number:</label>
+        <input
+          type="text"
+          name="phone"
+          //value={state.phone}
+          onChange={handleChange}
+        />
+        <button type="submit">Place Order</button>
+        {/*         <Link to="/confirmation">
+          <button type="submit">Place Order</button>
+        </Link> */}
+      </form>
+    </div>
+  )
 }

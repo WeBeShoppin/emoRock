@@ -8,12 +8,11 @@ function Checkout() {
 
   let prices = cart.map(item => item.price)
   let subtotal = prices.reduce((acc, current) => acc + current, 0)
-  let taxPercent = 0.08775
+  let taxPercent = 0.08875
   let tax = 1.08875
   let shipping = 9.99
   let grandTotal = Math.round(subtotal * tax) / 100 + shipping
-  console.log('subtotal', subtotal)
-  console.log('grand total', grandTotal)
+
   return (
     <div id="checkoutDiv">
       <h1>Checkout</h1>
@@ -34,7 +33,14 @@ function Checkout() {
         <p>Grand Total: {grandTotal}</p>
       </div>
       <p>Sorry! We are currently only accepting orders from NYC</p>
-      <CheckoutForm />
+      <CheckoutForm
+        subtotal={subtotal}
+        tax={taxPercent}
+        shipping={shipping}
+        //discount={discount}
+        grandTotal={grandTotal}
+        cart={cart}
+      />
     </div>
   )
 }
