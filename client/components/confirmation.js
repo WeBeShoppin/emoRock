@@ -9,8 +9,8 @@ export default function Confirmation(props) {
     <div id="confirmation">
       <h1>Thank You!</h1>
       <h3>
-        Your order #{order.orderNumber
-          ? order.orderNumber
+        Your order #{order.orderId
+          ? order.orderId
           : 'Warning: no order Number. Contact Customer service at support@emorocks.com'}{' '}
         has been placed
       </h3>

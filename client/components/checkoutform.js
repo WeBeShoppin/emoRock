@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {newOrder} from '../store/orders'
 import {useDispatch} from 'react-redux'
+const orderid = require('order-id')('mysecret')
 
 //need to add user (or guest) and items in cart to database
 
@@ -12,7 +13,8 @@ export default function CheckoutForm(props) {
     tax: tax * 100000,
     shipping: shipping * 100,
     grandTotal: Math.round(grandTotal * 100),
-    status: 'confirmed'
+    status: 'confirmed',
+    orderId: orderid.generate()
   }
   const dispatch = useDispatch()
 
