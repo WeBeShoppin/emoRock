@@ -125,13 +125,11 @@ footer {
   padding-top: 20px;
   margin-right: 60px;
 }
-.quantity input {
-  border: none;
-  text-align: center;
-  width: 16px;
+
+.quantity span {
   font-size: 15px;
+  margin-left: 40px;
   color: #43484d;
-  font-weight: 300;
 }
 
 .plus-btn,
@@ -155,8 +153,6 @@ footer {
   border: 3px solid black;
   width: 20%;
   padding: 10px;
-  /*   position: fixed;
-  right: 10%; */
 }
 
 #checkoutDiv {
