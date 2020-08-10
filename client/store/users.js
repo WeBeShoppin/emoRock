@@ -1,5 +1,4 @@
 import axios from 'axios'
-import user from './user'
 
 /**
  * ACTION TYPES

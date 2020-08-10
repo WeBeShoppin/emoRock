@@ -9,7 +9,6 @@ const Navbar = () => {
   const handleClick = () => {
     dispatch(logout())
   }
-  // const userId = useSelector(state => state.user.id)
 
   return (
     <div>

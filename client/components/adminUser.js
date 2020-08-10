@@ -15,7 +15,6 @@ function AdminUser(props) {
     },
     [props.match.params.userId]
   )
-  console.log('props', props)
   return (
     <div id="user">
       <h1>Name: {user.email}</h1>
