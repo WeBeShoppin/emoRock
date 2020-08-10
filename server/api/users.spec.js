@@ -8,7 +8,7 @@ const User = db.model('user')
 const agent = request.agent(app)
 const Promise = require('bluebird')
 
-describe('User routes', () => {
+xdescribe('User routes', () => {
   beforeEach(() => {
     return db.sync({force: true})
   })
@@ -17,7 +17,7 @@ describe('User routes', () => {
     return Promise.all([User.truncate({cascade: true})])
   })
 
-  describe('/api/users/', () => {
+  xdescribe('/api/users/', () => {
     const codysEmail = 'cody@puppybook.com'
 
     beforeEach(() => {
@@ -27,7 +27,7 @@ describe('User routes', () => {
       })
     })
 
-    it('GET /api/users', async () => {
+    xit('GET /api/users', async () => {
       const res = await request(app)
         .get('/api/users')
         .expect(200)
@@ -37,7 +37,7 @@ describe('User routes', () => {
     })
   }) // end describe('/api/users')
 
-  describe('GET api/users/:userId', () => {
+  xdescribe('GET api/users/:userId', () => {
     let testUser
 
     beforeEach(async () => {
@@ -76,7 +76,7 @@ describe('User routes', () => {
      * This is a proper GET /user/ID request
      * where we search by the ID of the user created above
      */
-    it('returns the JSON of the user based on the id', async () => {
+    xit('returns the JSON of the user based on the id', async () => {
       const res = await agent.get('/api/users/' + testUser.id).expect(200)
 
       if (typeof res.body === 'string') {
@@ -88,7 +88,7 @@ describe('User routes', () => {
     /**
      * Here we pass in a bad ID to the URL, we should get a 404 error
      */
-    it('returns a 404 error if the ID is not correct', () => {
+    xit('returns a 404 error if the ID is not correct', () => {
       return agent.get('/api/users/200000').expect(404)
     })
   })
