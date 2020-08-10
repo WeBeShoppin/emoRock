@@ -8,9 +8,13 @@ function AdminUser(props) {
   const loadUser = id => {
     dispatch(adminGetUser(id))
   }
+  const loadAdminStatus = () => {
+    dispatch(me())
+  }
 
   useEffect(
     () => {
+      loadAdminStatus()
       loadUser(props.match.params.userId)
     },
     [props.match.params.userId]

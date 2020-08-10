@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {getAllUsers} from '../store/users'
+import {me} from '../store/user'
 import {useDispatch, useSelector} from 'react-redux'
 import {Link} from 'react-router-dom'
 
@@ -13,7 +14,12 @@ function UserList() {
     dispatch(getAllUsers())
   }
 
+  const loadAdminStatus = () => {
+    dispatch(me())
+  }
+
   useEffect(() => {
+    loadAdminStatus()
     loadAllUsers()
   }, [])
 
