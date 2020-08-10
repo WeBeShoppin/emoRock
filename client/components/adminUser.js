@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {adminGetUser} from '../store/user'
+import {adminGetUser, me} from '../store/user'
 import {useDispatch, useSelector} from 'react-redux'
 
 function AdminUser(props) {
@@ -8,9 +8,13 @@ function AdminUser(props) {
   const loadUser = id => {
     dispatch(adminGetUser(id))
   }
+  const loadAdminStatus = () => {
+    dispatch(me())
+  }
 
   useEffect(
     () => {
+      loadAdminStatus()
       loadUser(props.match.params.userId)
     },
     [props.match.params.userId]

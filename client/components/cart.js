@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {
@@ -76,7 +76,7 @@ function Cart() {
                 >
                   <img src="https://www.svgrepo.com/show/135110/plus.svg" />
                 </button>
-                <input type="text" name="name" value={item.qty} />
+                <span>{item.qty}</span>
                 <button
                   className="minus-btn"
                   type="button"

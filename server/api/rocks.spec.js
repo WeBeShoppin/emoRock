@@ -116,8 +116,8 @@ describe('Rock routes', () => {
     })
 
     // This one should fail with a 500 because we don't set the article.content
-    it('does not create a new rock without price', () => {
-      return agent
+    it('does not create a new rock without price', async () => {
+      await agent
         .post('/api/rocks/add')
         .send({
           id: 2,
@@ -164,60 +164,73 @@ describe('Rock routes', () => {
    * Series of specs to test updating of Articles using a PUT
    * request to /articles/:id
    */
-  describe('PUT /rocks/:rockId', () => {
-    let rock
+  // describe('PUT /rocks/:rockId', () => {
+  //   let rock
+  //   let user
 
-    beforeEach(async () => {
-      rock = await Rock.create({
-        id: 3,
-        name: 'Test Rock 3',
-        summary: 'This is another cute rock',
-        description: 'The description should also be longer than the summary',
-        price: 3000,
-        category: 'Fear',
-        color: 'red',
-        inventory: 100,
-        status: 'inStock'
-      })
-    })
+  //   beforeEach(async () => {
+  //     rock = await Rock.create({
+  //       id: 3,
+  //       name: 'Test Rock 3',
+  //       summary: 'This is another cute rock',
+  //       description: 'The description should also be longer than the summary',
+  //       price: 3000,
+  //       category: 'Fear',
+  //       color: 'red',
+  //       inventory: 100,
+  //       status: 'inStock'
+  //     }),
+  //     user = await User.create({
+  //       id: 1,
+  //       firstName: 'Danella',
+  //       lastName: 'Trudgion',
+  //       email: 'dtrudgion0@oracle.com',
+  //       password: 'UDwOGg66W',
+  //       salt: '',
+  //       address: '648 Lawn Lane',
+  //       phone: 3513905363,
+  //       isAdmin: true,
+  //       googleId: ''
+  //     })
+  //   })
 
-    // it('updates a rock', async () => {
+  //   it('updates a rock', async () => {
 
-    //   const res = await agent
-    //   .put('/api/rocks/' + rock.id)
-    //   .send({
-    //     description: 'The description is now updated!!'
-    //   })
-    //   .expect(200);
+  //     const res = await agent
+  //     .put('/api/rocks/' + rock.id, user)
+  //     .send({
+  //       description: 'The description is now updated!!'
+  //     })
+  //     .expect(200);
 
-    //   expect(res.body.rock.id).to.not.be.an('undefined');
-    //   expect(res.body.rock.description).to.equal('The description is now updated!!');
-    //   expect(res.body.rock.name).to.equal('Test Rock 3');
+  //     expect(res.body.rock.id).to.not.be.an('undefined');
+  //     expect(res.body.rock.description).to.equal('The description is now updated!!');
+  //     expect(res.body.rock.name).to.equal('Test Rock 3');
 
-    // });
+  //   });
 
-    // it('saves updates to the DB', async () => {
+  //   it('saves updates to the DB', async () => {
 
-    //   await agent
-    //   .put('/api/rocks/' + rock.id)
-    //   .send({
-    //     description: 'The description is now updated!!'
-    //   });
+  //     await agent
+  //     .put('/api/rocks/' + rock.id, user)
+  //     .send({
+  //       description: 'The description is now updated!!'
+  //     });
 
-    //   const foundRock = await Rock.findByPk(rock.id);
+  //     const foundRock = await Rock.findByPk(rock.id);
 
-    //   expect(foundRock).to.exist; // eslint-disable-line no-unused-expressions
-    //   expect(foundRock.description).to.equal('The description is now updated!!');
+  //     expect(foundRock).to.exist; // eslint-disable-line no-unused-expressions
+  //     expect(foundRock.description).to.equal('The description is now updated!!');
 
-    // });
+  //   });
 
-    // it('gets 500 for invalid update', () => {
+  //   it('gets 500 for invalid update', () => {
 
-    //   return agent
-    //   .put('/api/rocks/' + rock.id)
-    //   .send({ price: "hello" })
-    //   .expect(500);
+  //     return agent
+  //     .put('/api/rocks/' + rock.id, user)
+  //     .send({ price: "hello" })
+  //     .expect(500);
 
-    // });
-  })
+  //   });
+  // })
 }) // end describe('Rock routes')

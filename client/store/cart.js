@@ -101,7 +101,8 @@ export const decreaseItemQty = item => (dispatch, getState) => {
 // INITIAL STATE
 const initialState = {
   items: [],
-  total: 0
+  total: 0,
+  qty: 0
 }
 
 // HELPER FUNCTION
@@ -110,36 +111,48 @@ const totalPrice = cartItems => {
   return cartItems.reduce((sum, p) => sum + p.price * p.qty, 0)
 }
 
+const totalQty = cartItems => {
+  return cartItems.reduce((sum, r) => sum + r.qty, 0)
+}
+
 // REDUCER
 export default function(state = initialState, action) {
   switch (action.type) {
     case GET_CART:
       let cartTotal = totalPrice(action.cart)
+      let cartQtyTotal = totalQty(action.cart)
       return {
         ...state,
         items: action.cart,
-        total: cartTotal / 100
+        total: cartTotal / 100,
+        qty: cartQtyTotal
       }
     case ADD_TO_CART:
       let addedTotal = totalPrice(action.items)
+      let addedQtyTotal = totalQty(action.items)
       return {
         ...state,
         items: action.items,
-        total: addedTotal / 100
+        total: addedTotal / 100,
+        qty: addedQtyTotal
       }
     case DELETE_ITEM:
       let deletedTotal = totalPrice(action.cartWithOutItem)
+      let deletedQtyTotal = totalQty(action.cartWithOutItem)
       return {
         ...state,
         items: action.cartWithOutItem,
-        total: deletedTotal / 100
+        total: deletedTotal / 100,
+        qty: deletedQtyTotal
       }
     case DECREMENT_ITEM_QTY:
       let decreasedTotal = totalPrice(action.items)
+      let decreasedQtyTotal = totalQty(action.items)
       return {
         ...state,
         items: action.items,
-        total: decreasedTotal / 100
+        total: decreasedTotal / 100,
+        qty: decreasedQtyTotal
       }
     default:
       return state
