@@ -59,7 +59,7 @@ function Cart() {
               </div>
 
               <div className="image">
-                <img src="https://cdn.shoplightspeed.com/shops/623692/files/15032482/156x230x2/igneous-theory-pet-rock-craft-kit.jpg" />
+                <img className="item-image" src={item.imageUrl} />
               </div>
 
               <div className="description">
