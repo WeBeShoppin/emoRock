@@ -3,12 +3,12 @@ import {withRouter, Route, Switch} from 'react-router-dom'
 import {
   Login,
   Signup,
-  //UserHome,
   SingleRock,
   RockList,
   Landing,
   Cart,
   UserList,
+  AdminUser,
   UserHome,
   Checkout,
   Confirmation
@@ -41,7 +41,8 @@ const Routes = () => {
       <Route path="/checkout" component={Checkout} />
       <Route path="/cart" component={Cart} />
       <Route path="/myAccount" component={UserHome} />
-      <Route path="/admin/users" component={UserList} />
+      <Route path="/users/:userId" component={AdminUser} />
+      <Route exact path="/users" component={UserList} />
       <Route path="/confirmation" component={Confirmation} />
       {/* Displays our Landing component as a fallback */}
       <Route component={Landing} />

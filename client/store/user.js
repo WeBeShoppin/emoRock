@@ -51,6 +51,17 @@ export const auth = (credentials, method) => async dispatch => {
   }
 }
 
+export const adminGetUser = id => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.get(`/api/users/${id}`)
+      dispatch(getUser(data))
+    } catch (error) {
+      console.error(error)
+    }
+  }
+}
+
 export const logout = () => async dispatch => {
   try {
     await axios.post('/auth/logout')
