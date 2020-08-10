@@ -3,6 +3,8 @@
 // ACTION TYPES
 const GET_CART = 'GET_CART'
 const ADD_TO_CART = 'ADD_TO_CART'
+const DELETE_ITEM = 'DELETE_ITEM'
+const DECREMENT_ITEM_QTY = 'DECREMENT_ITEM_QTY'
 
 // ACTION CREATORS
 const getCart = cart => ({
@@ -12,6 +14,16 @@ const getCart = cart => ({
 
 const addToCart = items => ({
   type: ADD_TO_CART,
+  items
+})
+
+const deleteItem = cartWithOutItem => ({
+  type: DELETE_ITEM,
+  cartWithOutItem
+})
+
+const decrementItemQty = items => ({
+  type: DECREMENT_ITEM_QTY,
   items
 })
 
@@ -56,24 +68,78 @@ export const addItemToLocalStorage = rock => (dispatch, getState) => {
   }
 }
 
+export const deleteItemFromLocalStorage = itemId => (dispatch, getState) => {
+  try {
+    const cart = getState().cart.items
+    let cartWithoutItem = cart.filter(item => item.id !== itemId)
+    localStorage.setItem('cart', JSON.stringify(cartWithoutItem))
+    dispatch(deleteItem(cartWithoutItem))
+  } catch (err) {
+    console.error(err.message)
+  }
+}
+
+export const decreaseItemQty = item => (dispatch, getState) => {
+  try {
+    let cart = getState().cart.items
+    let itemIndex = cart.indexOf(r => r.id === item.id)
+    if (item.qty > 1) {
+      item.qty -= 1
+      cart[itemIndex] = item
+      localStorage.setItem('cart', JSON.stringify(cart))
+      dispatch(decrementItemQty(cart))
+    } else {
+      let newCart = cart.filter(r => r.id !== item.id)
+      localStorage.setItem('cart', JSON.stringify(newCart))
+      dispatch(decrementItemQty(newCart))
+    }
+  } catch (err) {
+    console.error(err.message)
+  }
+}
+
 // INITIAL STATE
 const initialState = {
   items: [],
   total: 0
 }
 
+// HELPER FUNCTION
+
+const totalPrice = cartItems => {
+  return cartItems.reduce((sum, p) => sum + p.price * p.qty, 0)
+}
+
 // REDUCER
 export default function(state = initialState, action) {
   switch (action.type) {
     case GET_CART:
+      let cartTotal = totalPrice(action.cart)
       return {
         ...state,
-        items: action.cart
+        items: action.cart,
+        total: cartTotal / 100
       }
     case ADD_TO_CART:
+      let addedTotal = totalPrice(action.items)
       return {
         ...state,
-        items: action.items
+        items: action.items,
+        total: addedTotal / 100
+      }
+    case DELETE_ITEM:
+      let deletedTotal = totalPrice(action.cartWithOutItem)
+      return {
+        ...state,
+        items: action.cartWithOutItem,
+        total: deletedTotal / 100
+      }
+    case DECREMENT_ITEM_QTY:
+      let decreasedTotal = totalPrice(action.items)
+      return {
+        ...state,
+        items: action.items,
+        total: decreasedTotal / 100
       }
     default:
       return state

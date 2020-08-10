@@ -1,7 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {getCartFromStorage, addItemToLocalStorage} from '../store/cart'
+import {
+  getCartFromStorage,
+  addItemToLocalStorage,
+  deleteItemFromLocalStorage,
+  decreaseItemQty
+} from '../store/cart'
 
 function Cart() {
   const cart = useSelector(state => state.cart)
@@ -19,12 +24,12 @@ function Cart() {
     dispatch(addItemToLocalStorage(item))
   }
 
-  function minusItem(itemId) {
-    return null
+  const handleDeleteBtn = itemId => {
+    dispatch(deleteItemFromLocalStorage(itemId))
   }
 
-  function deleteItem(itemId) {
-    return null
+  const handleMinusBtn = item => {
+    dispatch(decreaseItemQty(item))
   }
 
   return (
@@ -40,7 +45,7 @@ function Cart() {
                 <button
                   className="delete-btn"
                   type="button"
-                  onClick={() => deleteItem(item.id)}
+                  onClick={() => handleDeleteBtn(item.id)}
                 >
                   X
                 </button>
@@ -65,11 +70,17 @@ function Cart() {
                   <img src="https://www.svgrepo.com/show/135110/plus.svg" />
                 </button>
                 <input type="text" name="name" value={item.qty} />
-                <button className="minus-btn" type="button">
+                <button
+                  className="minus-btn"
+                  type="button"
+                  onClick={() => handleMinusBtn(item)}
+                >
                   <img src="https://www.svgrepo.com/show/201922/minus.svg" />
                 </button>
               </div>
-              <div className="total-price">Total: 0</div>
+              <div className="total-price">
+                Total: ${item.qty * item.price / 100}
+              </div>
             </div>
           ))
         )}
