@@ -18,7 +18,7 @@ function SingleRock(props) {
 
   return (
     <div id="singleRock">
-      {/* <img src={rock.imageUrl} /> */}
+      <img classNmae="singleRockimg" src={rock.imageUrl} />
       <h1>Name: {rock.name}</h1>
       <p>Price: {rock.price}</p>
       <p>Category: {rock.category}</p>

@@ -26,6 +26,7 @@ function RockList() {
       {rocks.map(rock => (
         <div className="eachRock" key={rock.id}>
           <Link to={`/rocks/${rock.id}`} component={SingleRock}>
+            <img className="rockimg" src={rock.imageUrl} />
             <p className="introduction">Rock name: {rock.name}</p>
           </Link>
           <button type="button" onClick={() => handleAddBtn(rock)}>
