@@ -1,7 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {getCartFromStorage, addItemToLocalStorage} from '../store/cart'
+import {
+  getCartFromStorage,
+  addItemToLocalStorage,
+  deleteItemFromLocalStorage
+} from '../store/cart'
 
 function Cart() {
   const cart = useSelector(state => state.cart)
@@ -19,11 +23,11 @@ function Cart() {
     dispatch(addItemToLocalStorage(item))
   }
 
-  function minusItem(itemId) {
-    return null
+  const handleDeleteBtn = itemId => {
+    dispatch(deleteItemFromLocalStorage(itemId))
   }
 
-  function deleteItem(itemId) {
+  function minusItem(itemId) {
     return null
   }
 
@@ -40,7 +44,7 @@ function Cart() {
                 <button
                   className="delete-btn"
                   type="button"
-                  onClick={() => deleteItem(item.id)}
+                  onClick={() => handleDeleteBtn(item.id)}
                 >
                   X
                 </button>

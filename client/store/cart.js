@@ -3,6 +3,7 @@
 // ACTION TYPES
 const GET_CART = 'GET_CART'
 const ADD_TO_CART = 'ADD_TO_CART'
+const DELETE_ITEM = 'DELETE_ITEM'
 
 // ACTION CREATORS
 const getCart = cart => ({
@@ -13,6 +14,11 @@ const getCart = cart => ({
 const addToCart = items => ({
   type: ADD_TO_CART,
   items
+})
+
+const deleteItem = cartWithOutItem => ({
+  type: DELETE_ITEM,
+  cartWithOutItem
 })
 
 // THUNK CREATORS
@@ -56,6 +62,17 @@ export const addItemToLocalStorage = rock => (dispatch, getState) => {
   }
 }
 
+export const deleteItemFromLocalStorage = itemId => (dispatch, getState) => {
+  try {
+    const cart = getState().cart.items
+    let cartWithoutItem = cart.filter(item => item.id !== itemId)
+    localStorage.setItem('cart', JSON.stringify(cartWithoutItem))
+    dispatch(deleteItem(cartWithoutItem))
+  } catch (err) {
+    console.error(err.message)
+  }
+}
+
 // INITIAL STATE
 const initialState = {
   items: [],
@@ -74,6 +91,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         items: action.items
+      }
+    case DELETE_ITEM:
+      return {
+        ...state,
+        items: action.cartWithOutItem
       }
     default:
       return state
