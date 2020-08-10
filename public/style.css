@@ -170,3 +170,14 @@ footer {
 #form {
   display: block;
 }
+
+#checkoutButton {
+  font-size: 24px;
+  background-color: white;
+  text-align: right;
+}
+
+.shopping-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
