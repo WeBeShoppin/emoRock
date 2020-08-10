@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import {getAllRocks} from '../store/rocks'
 import {useDispatch, useSelector} from 'react-redux'
 import SingleRock from './singleRock'
