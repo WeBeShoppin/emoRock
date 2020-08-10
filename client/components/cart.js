@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom'
 import {
   getCartFromStorage,
   addItemToLocalStorage,
-  deleteItemFromLocalStorage
+  deleteItemFromLocalStorage,
+  decreaseItemQty
 } from '../store/cart'
 
 function Cart() {
@@ -27,8 +28,8 @@ function Cart() {
     dispatch(deleteItemFromLocalStorage(itemId))
   }
 
-  function minusItem(itemId) {
-    return null
+  const handleMinusBtn = item => {
+    dispatch(decreaseItemQty(item))
   }
 
   return (
@@ -69,11 +70,17 @@ function Cart() {
                   <img src="https://www.svgrepo.com/show/135110/plus.svg" />
                 </button>
                 <input type="text" name="name" value={item.qty} />
-                <button className="minus-btn" type="button">
+                <button
+                  className="minus-btn"
+                  type="button"
+                  onClick={() => handleMinusBtn(item)}
+                >
                   <img src="https://www.svgrepo.com/show/201922/minus.svg" />
                 </button>
               </div>
-              <div className="total-price">Total: 0</div>
+              <div className="total-price">
+                Total: ${item.qty * item.price / 100}
+              </div>
             </div>
           ))
         )}
