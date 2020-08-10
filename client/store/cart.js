@@ -118,7 +118,7 @@ const totalQty = cartItems => {
 // REDUCER
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_CART:
+    case GET_CART: {
       let cartTotal = totalPrice(action.cart)
       let cartQtyTotal = totalQty(action.cart)
       return {
@@ -127,7 +127,8 @@ export default function(state = initialState, action) {
         total: cartTotal / 100,
         qty: cartQtyTotal
       }
-    case ADD_TO_CART:
+    }
+    case ADD_TO_CART: {
       let addedTotal = totalPrice(action.items)
       let addedQtyTotal = totalQty(action.items)
       return {
@@ -136,7 +137,8 @@ export default function(state = initialState, action) {
         total: addedTotal / 100,
         qty: addedQtyTotal
       }
-    case DELETE_ITEM:
+    }
+    case DELETE_ITEM: {
       let deletedTotal = totalPrice(action.cartWithOutItem)
       let deletedQtyTotal = totalQty(action.cartWithOutItem)
       return {
@@ -145,7 +147,8 @@ export default function(state = initialState, action) {
         total: deletedTotal / 100,
         qty: deletedQtyTotal
       }
-    case DECREMENT_ITEM_QTY:
+    }
+    case DECREMENT_ITEM_QTY: {
       let decreasedTotal = totalPrice(action.items)
       let decreasedQtyTotal = totalQty(action.items)
       return {
@@ -154,6 +157,7 @@ export default function(state = initialState, action) {
         total: decreasedTotal / 100,
         qty: decreasedQtyTotal
       }
+    }
     default:
       return state
   }

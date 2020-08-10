@@ -18,7 +18,8 @@ function RockList() {
   const handleAddBtn = item => {
     addToast('Successfully added to cart', {
       appearance: 'success',
-      autoDismiss: true
+      autoDismiss: true,
+      autoDismissTimeout: 1500
     })
     dispatch(addItemToLocalStorage(item))
   }
