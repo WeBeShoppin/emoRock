@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 
 function UserList() {
   const isAdmin = useSelector(state => state.user.isAdmin)
+  const users = useSelector(state => state.users)
 
   const dispatch = useDispatch()
 
@@ -15,8 +16,6 @@ function UserList() {
   useEffect(() => {
     loadAllUsers()
   }, [])
-
-  const users = useSelector(state => state.users)
 
   return (
     <div>
