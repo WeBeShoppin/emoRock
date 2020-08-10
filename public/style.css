@@ -7,6 +7,16 @@ a {
   color: inherit;
 }
 
+.rockimg {
+  width: 200px;
+  height: 200px;
+}
+
+.singleRockimg {
+  width: 400px;
+  height: 400px;
+}
+
 label {
   display: block;
 }

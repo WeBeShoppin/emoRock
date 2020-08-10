@@ -9,6 +9,9 @@ const Rock = db.define('rock', {
       notEmpty: true
     }
   },
+  imageUrl: {
+    type: Sequelize.STRING
+  },
   summary: Sequelize.STRING,
   description: Sequelize.TEXT,
   price: {
