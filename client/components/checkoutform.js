@@ -58,10 +58,15 @@ export default function CheckoutForm(props) {
           //value={state.phone}
           onChange={handleChange}
         />
-        <button type="submit">Place Order</button>
-        {/*         <Link to="/confirmation">
+        <Link
+          to={{
+            pathname: '/confirmation',
+            cart,
+            orderObj
+          }}
+        >
           <button type="submit">Place Order</button>
-        </Link> */}
+        </Link>
       </form>
     </div>
   )
