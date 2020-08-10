@@ -15,3 +15,16 @@ router.get('/', async (req, res, next) => {
     next(err)
   }
 })
+
+router.get('/:userId', async (req, res, next) => {
+  try {
+    const user = await User.findByPk(req.params.userId)
+    if (user) {
+      res.json(user)
+    } else {
+      res.status(404).send('The user is not found')
+    }
+  } catch (err) {
+    next(err)
+  }
+})
