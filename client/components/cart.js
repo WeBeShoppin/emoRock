@@ -34,7 +34,14 @@ function Cart() {
 
   return (
     <div className="shopping-cart">
-      <div className="shopping-title">Your Cart</div>
+      <div className="shopping-title">
+        Your Cart
+        <Link to="/checkout">
+          <button id="checkoutButton" type="button">
+            Checkout
+          </button>
+        </Link>
+      </div>
       <div className="cart-list">
         {cart.items.length === 0 ? (
           <p>No Items</p>

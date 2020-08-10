@@ -1,14 +1,17 @@
 import React from 'react'
 import CheckoutForm from './checkoutform'
+import {useSelector} from 'react-redux'
 
-function Checkout(props) {
-  let cart = props.location.state.cart
+function Checkout() {
+  let cart = useSelector(state => state.cart.items)
+  console.log(cart)
+
   let prices = cart.map(item => item.price)
-  let subtotal = prices.reduce((acc, current) => acc + current)
+  let subtotal = prices.reduce((acc, current) => acc + current, 0)
   let taxPercent = 0.08775
   let tax = 1.08875
-  //let shipping = 9.99
-  let grandTotal = Math.round(subtotal * tax) / 100 //+ shipping
+  let shipping = 9.99
+  let grandTotal = Math.round(subtotal * tax) / 100 + shipping
   console.log('subtotal', subtotal)
   console.log('grand total', grandTotal)
   return (
