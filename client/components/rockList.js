@@ -4,9 +4,11 @@ import {useDispatch, useSelector} from 'react-redux'
 import SingleRock from './singleRock'
 import {Link} from 'react-router-dom'
 import {addItemToLocalStorage} from '../store/cart'
+import {useToasts} from 'react-toast-notifications'
 
 function RockList() {
   const rocks = useSelector(state => state.rocks)
+  const {addToast} = useToasts()
   const dispatch = useDispatch()
 
   const loadAllRocks = () => {
@@ -14,6 +16,10 @@ function RockList() {
   }
 
   const handleAddBtn = item => {
+    addToast('Successfully added to cart', {
+      appearance: 'success',
+      autoDismiss: true
+    })
     dispatch(addItemToLocalStorage(item))
   }
 
