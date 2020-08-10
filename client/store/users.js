@@ -26,11 +26,7 @@ const setAllUsers = users => ({
 
 export const getAllUsers = () => async dispatch => {
   try {
-    console.log('before test if admin')
-    // if (user.isAdmin) {
-    console.log('after if statement')
     const {data} = await axios.get('/api/users')
-    console.log('after axios request')
     dispatch(setAllUsers(data))
     // }
   } catch (err) {
