@@ -1,24 +1,22 @@
 import React, {useEffect} from 'react'
-import {adminGetUser, me} from '../store/user'
+import {adminGetUser} from '../store/user'
 import {useDispatch, useSelector} from 'react-redux'
 
 function AdminUser(props) {
-  const user = useSelector(state => state.user)
   const dispatch = useDispatch()
   const loadUser = id => {
     dispatch(adminGetUser(id))
   }
-  const loadAdminStatus = () => {
-    dispatch(me())
-  }
 
   useEffect(
     () => {
-      loadAdminStatus()
       loadUser(props.match.params.userId)
     },
     [props.match.params.userId]
   )
+
+  const user = useSelector(state => state.user)
+
   return (
     <div id="user">
       <h1>Name: {user.email}</h1>
