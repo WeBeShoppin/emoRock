@@ -5,6 +5,7 @@ import history from '../history'
  * ACTION TYPES
  */
 const GET_USER = 'GET_USER'
+const UPDATE_ADMIN = 'UPDATE_ADMIN'
 const REMOVE_USER = 'REMOVE_USER'
 
 /**
@@ -17,6 +18,11 @@ const defaultUser = {}
  */
 const getUser = user => ({
   type: GET_USER,
+  user
+})
+
+const updateAdmin = user => ({
+  type: UPDATE_ADMIN,
   user
 })
 
@@ -59,6 +65,15 @@ export const logout = () => async dispatch => {
     history.push('/login')
   } catch (err) {
     console.error(err)
+  }
+}
+
+export const changeAdmin = userId => async dispatch => {
+  try {
+    await axios.put(`api/user/${userId}`)
+    dispatch(updateAdmin())
+  } catch (error) {
+    console.log(error)
   }
 }
 
