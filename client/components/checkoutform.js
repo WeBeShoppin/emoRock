@@ -12,7 +12,7 @@ export default function CheckoutForm(props) {
     shipping: shipping * 100,
     grandTotal: Math.round(grandTotal * 100),
     status: 'confirmed',
-    orderId: orderid.generate()
+    orderNumber: orderid.generate()
   }
 
   function handleChange() {
