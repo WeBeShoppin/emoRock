@@ -1,17 +1,31 @@
 import React, {useState} from 'react'
+import {useDispatch} from 'react-redux'
+import {changeUser} from '../store/user'
 
 function AdminUser(props) {
-  const user = props.location.state.user //the user passed in here only have an id and an email, so in the edit form you can only see email has default input.
+  const user = props.location.state.user
+  const admin = user.isAdmin
+  const dispatch = useDispatch()
+  const updateUser = () => {
+    dispatch(changeUser(user.userId))
+  }
+  console.log('user before click', user)
+
+  //the user passed in here only have an id and an email, so in the edit form you can only see email has default input.
   //As long as the user passed in has all information, you can see all fields in this form have default value.
 
   const [firstName, setFirstName] = useState(user.firstName)
   const [lastName, setLastName] = useState(user.lastName)
   const [email, setEmail] = useState(user.email)
-  const [password, setPassword] = useState(user.password)
   const [phone, setPhone] = useState(user.phone)
   const [address, setAddress] = useState(user.address)
-  const [isAdmin, setIsAdmin] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(user.isAdmin)
 
+  const handleClick = () => {
+    updateUser()
+    // console.log('testing click')
+    // console.log('user admin status', admin)
+  }
   return (
     <div id="user">
       <h1>Name: {user.email}</h1>
@@ -53,18 +67,6 @@ function AdminUser(props) {
             />
           </div>
           <div>
-            <label htmlFor="password">
-              <small>Password</small>
-            </label>
-            <br />
-            <input
-              name="password"
-              type="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-            />
-          </div>
-          <div>
             <label htmlFor="phone">
               <small>Phone</small>
             </label>
@@ -103,7 +105,10 @@ function AdminUser(props) {
             </select>
           </div>
           <div>
-            <button type="update">Update my profile</button>
+            {/* eslint-disable-next-line react/button-has-type */}
+            <button type="update" onClick={handleClick}>
+              Update my profile
+            </button>
           </div>
         </form>
       </div>
