@@ -17,6 +17,11 @@ a {
   height: 400px;
 }
 
+.carouselimg {
+  width: 400px;
+  height: 400px;
+}
+
 label {
   display: block;
 }
