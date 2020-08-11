@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {User} = require('../db/models')
+const {User, Cart, Order, Rock} = require('../db/models')
 module.exports = router
 
 // const adminMiddleware = (req, res, next) => {
@@ -37,6 +37,35 @@ router.get('/:userId', async (req, res, next) => {
       }
     } else {
       res.status(404).send('The user is not found')
+    }
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.get('/:userId/cart', async (req, res, next) => {
+  try {
+    let rockIdsInCart = await Cart.findAll({
+      where: {
+        userId: req.params.userId
+      },
+      attributes: ['rockId'],
+      raw: true
+    })
+
+    let rocksFromCart = []
+
+    for (const rockId of rockIdsInCart) {
+      const rock = await Rock.findByPk(rockId.id)
+      return rocksFromCart.push(rock)
+    }
+
+    console.log('rocksFromCart', rocksFromCart)
+    // const rocksInCart = await Rock.findAll
+    if (rocksFromCart) {
+      res.json(rocksFromCart)
+    } else {
+      res.json([])
     }
   } catch (err) {
     next(err)

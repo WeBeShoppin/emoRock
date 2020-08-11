@@ -31,6 +31,7 @@ const decrementItemQty = items => ({
 export const getCartFromStorage = loggedIn => async dispatch => {
   try {
     let cart
+    let {data: user} = await axios.get('/auth/me')
     if (loggedIn === false) {
       cart = localStorage.getItem('cart')
       if (cart) {
@@ -39,8 +40,9 @@ export const getCartFromStorage = loggedIn => async dispatch => {
         cart = []
       }
     } else {
-      const res = await axios.get('/api/users/cart')
+      const res = await axios.get(`/api/users/${user.id}/cart`)
       cart = res.data
+      console.log('cart in getCart', cart)
     }
     dispatch(getCart(cart))
   } catch (err) {
