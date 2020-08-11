@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios'
 
 // ACTION TYPES
 const GET_CART = 'GET_CART'
@@ -28,13 +28,19 @@ const decrementItemQty = items => ({
 })
 
 // THUNK CREATORS
-export const getCartFromStorage = () => dispatch => {
+export const getCartFromStorage = loggedIn => async dispatch => {
   try {
-    let cart = localStorage.getItem('cart')
-    if (cart) {
-      cart = JSON.parse(cart)
+    let cart
+    if (loggedIn === false) {
+      cart = localStorage.getItem('cart')
+      if (cart) {
+        cart = JSON.parse(cart)
+      } else {
+        cart = []
+      }
     } else {
-      cart = []
+      const res = await axios.get('/api/users/cart')
+      cart = res.data
     }
     dispatch(getCart(cart))
   } catch (err) {
@@ -42,7 +48,10 @@ export const getCartFromStorage = () => dispatch => {
   }
 }
 
-export const addItemToLocalStorage = rock => (dispatch, getState) => {
+export const addItemToLocalStorage = (rock, loggedIn) => (
+  dispatch,
+  getState
+) => {
   try {
     let newRock = {}
     if (!rock.qty || rock.qty === 0) {
@@ -68,7 +77,10 @@ export const addItemToLocalStorage = rock => (dispatch, getState) => {
   }
 }
 
-export const deleteItemFromLocalStorage = itemId => (dispatch, getState) => {
+export const deleteItemFromLocalStorage = (itemId, loggedIn) => (
+  dispatch,
+  getState
+) => {
   try {
     const cart = getState().cart.items
     let cartWithoutItem = cart.filter(item => item.id !== itemId)
@@ -79,7 +91,7 @@ export const deleteItemFromLocalStorage = itemId => (dispatch, getState) => {
   }
 }
 
-export const decreaseItemQty = item => (dispatch, getState) => {
+export const decreaseItemQty = (item, loggedIn) => (dispatch, getState) => {
   try {
     let cart = getState().cart.items
     let itemIndex = cart.indexOf(r => r.id === item.id)

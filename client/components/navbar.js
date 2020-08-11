@@ -27,7 +27,6 @@ const Navbar = () => {
             <a href="#" onClick={handleClick}>
               Logout
             </a>
-            <Link to="/wishList">Wish List</Link>
             <Link to="/cart">Cart {cartQty}</Link>
           </div>
         ) : (
