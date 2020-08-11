@@ -7,6 +7,7 @@ function AdminUser(props) {
   const loadUser = id => {
     dispatch(adminGetUser(id))
   }
+  console.log('props', props)
 
   useEffect(
     () => {
@@ -15,11 +16,10 @@ function AdminUser(props) {
     [props.match.params.userId]
   )
 
-  const user = useSelector(state => state.user)
-
+  // const user = useSelector(state => state.user)
   return (
     <div id="user">
-      <h1>Name: {user.email}</h1>
+      {/* <h1>Name: {user.email}</h1> */}
       <p>edit form goes here</p>
     </div>
   )
