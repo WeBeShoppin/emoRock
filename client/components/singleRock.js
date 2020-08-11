@@ -36,7 +36,7 @@ function SingleRock(props) {
       <p>Category: {rock.category}</p>
       <p>Color: {rock.color}</p>
       <p>Summary: {rock.summary}</p>
-      <p>Description: {rock.description}</p>
+      <p>Product Detail:{rock.description}</p>
 
       <button type="button" onClick={() => handleAddBtn(rock)}>
         Add To Cart

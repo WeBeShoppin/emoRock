@@ -20,7 +20,7 @@ export default function Confirmation(props) {
   return (
     <div id="confirmation">
       <h1>Thank You!</h1>
-      <h3>Your order #{order.orderId} has been placed</h3>
+      <h3>Your order #{order.orderNumber} has been placed</h3>
       <hr />
       <h2>Order Summary</h2>
       <p>Total: {order.grandTotal / 100}</p>

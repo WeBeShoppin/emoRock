@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {me} from '../store/user'
 import SingleUser from './singleUser'
 import AdminTools from './adminTools'
+import UpdateSelf from './user-update'
 
 /**
  * COMPONENT
@@ -30,7 +31,7 @@ export const UserHome = () => {
         <h3>Account Info:</h3>
         <SingleUser />
       </div>
-      <div>{isAdmin && <AdminTools />}</div>
+      <div>{isAdmin ? <AdminTools /> : <UpdateSelf />}</div>
     </div>
   )
 }
