@@ -13,7 +13,9 @@ module.exports = router
 
 router.get('/', async (req, res, next) => {
   try {
-    if (req.user.isAdmin) {
+    if (!req.user) {
+      res.send(401)
+    } else if (req.user.isAdmin) {
       const users = await User.findAll({
         // explicitly select only the id and email fields - even though
         // users' passwords are encrypted, it won't help if we just
@@ -37,7 +39,9 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:userId/cart', async (req, res, next) => {
   try {
-    if (req.user.id === req.params.userId || req.user.isAdmin) {
+    if (!req.user) {
+      res.send(401)
+    } else if (req.user.id === req.params.userId || req.user.isAdmin) {
       const user = await User.findByPk(req.params.userId)
 
       if (user) {
@@ -53,7 +57,9 @@ router.get('/:userId/cart', async (req, res, next) => {
 
 router.get('/:userId', async (req, res, next) => {
   try {
-    if (req.user.id === req.params.userId || req.user.isAdmin) {
+    if (!req.user) {
+      res.send(401)
+    } else if (req.user.id === req.params.userId || req.user.isAdmin) {
       const user = await User.findByPk(req.params.userId)
 
       if (user) {
