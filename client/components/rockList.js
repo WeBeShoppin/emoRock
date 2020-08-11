@@ -13,7 +13,7 @@ import GridListTile from '@material-ui/core/GridListTile'
 import GridListTileBar from '@material-ui/core/GridListTileBar'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import IconButton from '@material-ui/core/IconButton'
-import AddShoppingCartIcon from '@material-ui/icons/Info'
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     height: 450
   },
   icon: {
-    color: 'rgba(255, 255, 255, 0.54)'
+    color: 'rgb(255, 255, 255)'
   }
 }))
 
@@ -99,6 +99,7 @@ function RockList() {
                   <IconButton
                     aria-label="add to shopping cart"
                     onClick={() => handleAddBtn(rock)}
+                    size="medium"
                   >
                     <AddShoppingCartIcon />
                   </IconButton>
@@ -108,20 +109,6 @@ function RockList() {
           ))}
         </GridList>
       </div>
-
-      {/* <div className="rockList">
-        {filteredRocks.map(rock => (
-          <div className="eachRock" key={rock.id}>
-            <Link to={`/rocks/${rock.id}`} component={SingleRock}>
-              <img className="rockimg" src={rock.imageUrl} />
-              <p className="introduction">Rock: {rock.name}</p>
-            </Link>
-            <button type="button" onClick={() => handleAddBtn(rock)}>
-              Add To Cart
-            </button>
-          </div>
-        ))}
-      </div> */}
     </div>
   )
 }
