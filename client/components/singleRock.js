@@ -20,8 +20,11 @@ function SingleRock(props) {
     <div id="singleRock">
       <img classNmae="singleRockimg" src={rock.imageUrl} />
       <h1>Name: {rock.name}</h1>
-      <p>Price: {rock.price}</p>
+      <p>Price: {rock.price / 100}</p>
       <p>Category: {rock.category}</p>
+      <p>Color: {rock.color}</p>
+      <p>Summary: {rock.summary}</p>
+      <p>Description: {rock.description}</p>
     </div>
   )
 }
