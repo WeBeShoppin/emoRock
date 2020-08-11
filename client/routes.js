@@ -39,7 +39,10 @@ const Routes = () => {
       <Route exact path="/rocks" component={RockList} />
       <Route path="/rocks/:rockId" component={SingleRock} />
       <Route path="/checkout" component={Checkout} />
-      <Route path="/cart" component={Cart} />
+      <Route
+        path="/cart"
+        render={routeProps => <Cart {...routeProps} isLoggedIn={isLoggedIn} />}
+      />
       <Route path="/myAccount" component={UserHome} />
       <Route path="/users/:userId" component={AdminUser} />
       <Route exact path="/users" component={UserList} />
