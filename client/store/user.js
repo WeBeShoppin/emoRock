@@ -6,6 +6,7 @@ import history from '../history'
  */
 const GET_USER = 'GET_USER'
 const REMOVE_USER = 'REMOVE_USER'
+const GET_USER_ADMIN_VIEW = 'GET_USER_ADMIN_VIEW'
 
 /**
  * INITIAL STATE
@@ -19,6 +20,12 @@ const getUser = user => ({
   type: GET_USER,
   user
 })
+
+const getUserAdminView = userAV => ({
+  type: GET_USER_ADMIN_VIEW,
+  userAV
+})
+
 const removeUser = () => ({
   type: REMOVE_USER
 })
@@ -55,7 +62,7 @@ export const adminGetUser = id => {
   return async dispatch => {
     try {
       const {data} = await axios.get(`/api/users/${id}`)
-      dispatch(getUser(data))
+      dispatch(getUserAdminView(data))
     } catch (error) {
       console.error(error)
     }
@@ -79,6 +86,8 @@ export default function(state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
       return action.user
+    case GET_USER_ADMIN_VIEW:
+      return action.userAV
     case REMOVE_USER:
       return defaultUser
     default:
