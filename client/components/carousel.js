@@ -1,11 +1,13 @@
 import React from 'react'
 import Carousel from 'react-elastic-carousel'
+import SingleRock from './singleRock'
+import {Link} from 'react-router-dom'
 
 const RockCarousel = () => {
   const items = [
-    {id: 1, title: 'item #1', imageUrl: '/RockImages/cute.JPG'},
-    {id: 2, title: 'item #2', imageUrl: '/RockImages/love1.JPG'},
-    {id: 3, title: 'item #3', imageUrl: '/RockImages/disgust.JPG'}
+    {id: 31, imageUrl: '/RockImages/smooch.png'},
+    {id: 33, imageUrl: '/RockImages/embarrased.JPG'},
+    {id: 30, imageUrl: '/RockImages/yawn.png'}
   ]
 
   return (
@@ -13,7 +15,9 @@ const RockCarousel = () => {
       <Carousel enableAutoPlay={true} autoPlaySpeed={2000}>
         {items.map(item => (
           <div key={item.id}>
-            <img src={item.imageUrl} />
+            <Link to={`/rocks/${item.id}`} component={SingleRock}>
+              <img className="carouselimg" src={item.imageUrl} />
+            </Link>
           </div>
         ))}
       </Carousel>
