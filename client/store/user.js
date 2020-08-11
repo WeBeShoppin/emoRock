@@ -68,12 +68,14 @@ export const logout = () => async dispatch => {
   }
 }
 
-export const changeUser = userId => async dispatch => {
-  try {
-    await axios.put(`api/user/${userId}`)
-    dispatch(updateUser(userId))
-  } catch (error) {
-    console.log(error)
+export const changeUser = (userId, user) => {
+  return async dispatch => {
+    try {
+      const {data} = await axios.put(`/api/users/${userId}`, user)
+      dispatch(updateUser(data))
+    } catch (err) {
+      console.log(err)
+    }
   }
 }
 

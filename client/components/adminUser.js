@@ -4,15 +4,10 @@ import {changeUser} from '../store/user'
 
 function AdminUser(props) {
   const user = props.location.state.user
-  const admin = user.isAdmin
   const dispatch = useDispatch()
-  const updateUser = () => {
-    dispatch(changeUser(user.userId))
+  const updateUser = (userId, user) => {
+    dispatch(changeUser(userId, user))
   }
-  console.log('user before click', user)
-
-  //the user passed in here only have an id and an email, so in the edit form you can only see email has default input.
-  //As long as the user passed in has all information, you can see all fields in this form have default value.
 
   const [firstName, setFirstName] = useState(user.firstName)
   const [lastName, setLastName] = useState(user.lastName)
@@ -21,16 +16,21 @@ function AdminUser(props) {
   const [address, setAddress] = useState(user.address)
   const [isAdmin, setIsAdmin] = useState(user.isAdmin)
 
-  const handleClick = () => {
-    updateUser()
-    // console.log('testing click')
-    // console.log('user admin status', admin)
+  const handleSubmit = event => {
+    event.preventDefault()
+
+    try {
+      updateUser(user.id, {firstName, lastName, email, phone, address, isAdmin})
+    } catch (error) {
+      console.log(error)
+    }
   }
+
   return (
     <div id="user">
       <h1>Name: {user.email}</h1>
       <div className="form">
-        <form name={name}>
+        <form name={name} onSubmit={handleSubmit}>
           <div>
             <label htmlFor="firstName">
               <small>First Name</small>
@@ -106,9 +106,7 @@ function AdminUser(props) {
           </div>
           <div>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button type="update" onClick={handleClick}>
-              Update my profile
-            </button>
+            <button type="submit">Update my profile</button>
           </div>
         </form>
       </div>
