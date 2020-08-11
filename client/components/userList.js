@@ -29,7 +29,14 @@ function UserList() {
         <div className="userList">
           {users.map(user => (
             <div className="eachUser" key={user.id}>
-              <Link to={`/users/${user.id}`}>
+              <Link
+                to={{
+                  pathname: `/users/${user.id}`,
+                  state: {
+                    user: user
+                  }
+                }}
+              >
                 <p className="email">User email: {user.email}</p>
               </Link>
             </div>
