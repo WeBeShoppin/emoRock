@@ -1,7 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {newOrder} from '../store/orders'
-import {useDispatch} from 'react-redux'
 const orderid = require('order-id')('mysecret')
 
 //need to add user (or guest) and items in cart to database
@@ -16,7 +14,6 @@ export default function CheckoutForm(props) {
     status: 'confirmed',
     orderId: orderid.generate()
   }
-  const dispatch = useDispatch()
 
   function handleChange() {
     console.log(props)
@@ -24,10 +21,6 @@ export default function CheckoutForm(props) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    //const firstName = evt.target.firstName.value
-    console.log(props)
-    dispatch(newOrder(orderObj))
-    localStorage.clear()
   }
 
   return (

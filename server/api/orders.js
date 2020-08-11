@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {Order} = require('../db/models')
+const {Order, User, Cart} = require('../db/models')
 
 /* const adminMiddleware = (req, res, next) => {
   if (!req.user || !req.user.isAdmin) {
@@ -10,7 +10,9 @@ const {Order} = require('../db/models')
 
 router.get('/', async (req, res, next) => {
   try {
-    const orders = await Order.findAll()
+    const orders = await Order.findAll({
+      include: [User, Cart]
+    })
     res.send(orders)
   } catch (err) {
     next(err)
