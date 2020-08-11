@@ -54,3 +54,14 @@ router.get('/:userId', async (req, res, next) => {
     next(err)
   }
 })
+
+// PUT /api/users/:userId
+router.put('/:userId', async (req, res, next) => {
+  try {
+    const user = await User.findByPk(req.params.userId)
+    const updatedUser = await user.update(req.body)
+    res.json(updatedUser)
+  } catch (err) {
+    next(err)
+  }
+})
