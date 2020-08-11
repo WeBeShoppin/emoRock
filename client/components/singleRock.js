@@ -1,12 +1,24 @@
 import React, {useEffect} from 'react'
 import {getSingleRock} from '../store/singleRock'
 import {useDispatch, useSelector} from 'react-redux'
+import {useToasts} from 'react-toast-notifications'
+import {addItemToLocalStorage} from '../store/cart'
 
 function SingleRock(props) {
   const rock = useSelector(state => state.singleRock)
   const dispatch = useDispatch()
+  const {addToast} = useToasts()
   const loadSingleRock = id => {
     dispatch(getSingleRock(id))
+  }
+
+  const handleAddBtn = item => {
+    addToast('Successfully added to cart', {
+      appearance: 'success',
+      autoDismiss: true,
+      autoDismissTimeout: 1500
+    })
+    dispatch(addItemToLocalStorage(item))
   }
 
   useEffect(
@@ -25,6 +37,10 @@ function SingleRock(props) {
       <p>Color: {rock.color}</p>
       <p>Summary: {rock.summary}</p>
       <p>Description: {rock.description}</p>
+
+      <button type="button" onClick={() => handleAddBtn(rock)}>
+        Add To Cart
+      </button>
     </div>
   )
 }

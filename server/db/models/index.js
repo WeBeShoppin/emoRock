@@ -18,12 +18,12 @@ const Cart = require('./cart')
  */
 
 User.hasMany(Order)
+User.hasOne(Cart)
+
+Cart.belongsTo(User)
 Order.belongsTo(User)
-Order.hasMany(Rock)
+
 Rock.belongsToMany(Order, {through: Cart})
-//Order.hasOne(Cart)
-//Cart.hasMany(Rock)
-//Rock.belongsToMany(Cart)
 
 module.exports = {
   User,
