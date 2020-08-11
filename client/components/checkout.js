@@ -1,6 +1,7 @@
 import React from 'react'
 import CheckoutForm from './checkoutform'
 import {useSelector} from 'react-redux'
+import history from '../history'
 
 function Checkout() {
   let cart = useSelector(state => state.cart.items)
@@ -40,6 +41,7 @@ function Checkout() {
         //discount={discount}
         grandTotal={grandTotal}
         cart={cart}
+        history={history}
       />
     </div>
   )

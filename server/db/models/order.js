@@ -2,17 +2,16 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Order = db.define('order', {
-  orderNumber: {
-    type: Sequelize.INTEGER
-  },
+  orderNumber: Sequelize.STRING,
   status: {
     type: Sequelize.ENUM(
       'inCart',
+      'pending',
       'checkout',
       'confirmed',
-      'pending',
       'shipped'
     )
+    //remove pending and checkout
   },
   subtotal: Sequelize.INTEGER,
   tax: Sequelize.INTEGER,
