@@ -47,6 +47,7 @@ function AdminUser(props) {
             <label htmlFor="lastName">
               <small>Last Name</small>
             </label>
+            <br />
             <input
               name="lastName"
               type="text"
@@ -106,7 +107,7 @@ function AdminUser(props) {
           </div>
           <div>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button type="submit">Update my profile</button>
+            <button type="submit">Update this profile</button>
           </div>
         </form>
       </div>
