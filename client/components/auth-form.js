@@ -81,6 +81,7 @@ const SignUpForm = props => {
           <label htmlFor="lastName">
             <small>Last Name</small>
           </label>
+          <br />
           <input name="lastName" type="text" />
         </div>
         <div>
