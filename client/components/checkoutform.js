@@ -27,6 +27,7 @@ export default function CheckoutForm(props) {
     //const firstName = evt.target.firstName.value
     console.log(props)
     dispatch(newOrder(orderObj))
+    localStorage.clear()
   }
 
   return (
