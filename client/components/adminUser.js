@@ -107,7 +107,7 @@ function AdminUser(props) {
           </div>
           <div>
             {/* eslint-disable-next-line react/button-has-type */}
-            <button type="submit">Update my profile</button>
+            <button type="submit">Update this profile</button>
           </div>
         </form>
       </div>
