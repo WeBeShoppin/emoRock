@@ -51,7 +51,7 @@
   },
   {
     "orderNumber": "861681",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 570,
     "tax": 8,
     "shipping": 544,
@@ -61,7 +61,7 @@
   },
   {
     "orderNumber": "178517",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 110,
     "tax": 8,
     "shipping": 410,
@@ -91,7 +91,7 @@
   },
   {
     "orderNumber": "416012",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 811,
     "tax": 8,
     "shipping": 762,
@@ -101,7 +101,7 @@
   },
   {
     "orderNumber": "605994",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 207,
     "tax": 8,
     "shipping": 704,
@@ -111,7 +111,7 @@
   },
   {
     "orderNumber": "166995",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 369,
     "tax": 8,
     "shipping": 754,
@@ -161,7 +161,7 @@
   },
   {
     "orderNumber": "160891",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 240,
     "tax": 8,
     "shipping": 325,
@@ -171,7 +171,7 @@
   },
   {
     "orderNumber": "972285",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 979,
     "tax": 8,
     "shipping": 957,
@@ -201,7 +201,7 @@
   },
   {
     "orderNumber": "331434",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 608,
     "tax": 8,
     "shipping": 184,
@@ -211,7 +211,7 @@
   },
   {
     "orderNumber": "587669",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 835,
     "tax": 8,
     "shipping": 655,
@@ -221,7 +221,7 @@
   },
   {
     "orderNumber": "249283",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 574,
     "tax": 8,
     "shipping": 833,
@@ -291,7 +291,7 @@
   },
   {
     "orderNumber": "796507",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 229,
     "tax": 8,
     "shipping": 915,
@@ -311,7 +311,7 @@
   },
   {
     "orderNumber": "815678",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 662,
     "tax": 8,
     "shipping": 599,
@@ -321,7 +321,7 @@
   },
   {
     "orderNumber": "495461",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 268,
     "tax": 8,
     "shipping": 476,
@@ -351,7 +351,7 @@
   },
   {
     "orderNumber": "523016",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 100,
     "tax": 8,
     "shipping": 856,
@@ -391,7 +391,7 @@
   },
   {
     "orderNumber": "279610",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 562,
     "tax": 8,
     "shipping": 423,
@@ -431,7 +431,7 @@
   },
   {
     "orderNumber": "599194",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 692,
     "tax": 8,
     "shipping": 439,
@@ -441,7 +441,7 @@
   },
   {
     "orderNumber": "614954",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 235,
     "tax": 8,
     "shipping": 535,
@@ -481,7 +481,7 @@
   },
   {
     "orderNumber": "235427",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 730,
     "tax": 8,
     "shipping": 339,
@@ -521,7 +521,7 @@
   },
   {
     "orderNumber": "128521",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 642,
     "tax": 8,
     "shipping": 255,
@@ -581,7 +581,7 @@
   },
   {
     "orderNumber": "915263",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 288,
     "tax": 8,
     "shipping": 994,
@@ -601,7 +601,7 @@
   },
   {
     "orderNumber": "171636",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 728,
     "tax": 8,
     "shipping": 470,
@@ -611,7 +611,7 @@
   },
   {
     "orderNumber": "854055",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 429,
     "tax": 8,
     "shipping": 896,
@@ -621,7 +621,7 @@
   },
   {
     "orderNumber": "363723",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 420,
     "tax": 8,
     "shipping": 181,
@@ -641,7 +641,7 @@
   },
   {
     "orderNumber": "618740",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 833,
     "tax": 8,
     "shipping": 794,
@@ -651,7 +651,7 @@
   },
   {
     "orderNumber": "273339",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 256,
     "tax": 8,
     "shipping": 258,
@@ -681,7 +681,7 @@
   },
   {
     "orderNumber": "901495",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 633,
     "tax": 8,
     "shipping": 315,
@@ -691,7 +691,7 @@
   },
   {
     "orderNumber": "853391",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 793,
     "tax": 8,
     "shipping": 109,
@@ -721,7 +721,7 @@
   },
   {
     "orderNumber": "692201",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 460,
     "tax": 8,
     "shipping": 205,
@@ -761,7 +761,7 @@
   },
   {
     "orderNumber": "544241",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 462,
     "tax": 8,
     "shipping": 407,
@@ -831,7 +831,7 @@
   },
   {
     "orderNumber": " 745032",
-    "status": "shipped",
+    "status": "confirmed",
     "subtotal": 570,
     "tax": 8,
     "shipping": 734,
@@ -841,7 +841,7 @@
   },
   {
     "orderNumber": "837533",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 842,
     "tax": 8,
     "shipping": 601,
@@ -911,7 +911,7 @@
   },
   {
     "orderNumber": "171573",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 246,
     "tax": 8,
     "shipping": 164,
@@ -931,7 +931,7 @@
   },
   {
     "orderNumber": "275069",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 625,
     "tax": 8,
     "shipping": 105,
@@ -941,7 +941,7 @@
   },
   {
     "orderNumber": "966585",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 524,
     "tax": 8,
     "shipping": 844,
@@ -971,7 +971,7 @@
   },
   {
     "orderNumber": "727621",
-    "status": "checkout",
+    "status": "confirmed",
     "subtotal": 153,
     "tax": 8,
     "shipping": 429,
