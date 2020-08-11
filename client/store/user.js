@@ -6,7 +6,6 @@ import history from '../history'
  */
 const GET_USER = 'GET_USER'
 const REMOVE_USER = 'REMOVE_USER'
-const GET_USER_ADMIN_VIEW = 'GET_USER_ADMIN_VIEW'
 
 /**
  * INITIAL STATE
@@ -19,11 +18,6 @@ const defaultUser = {}
 const getUser = user => ({
   type: GET_USER,
   user
-})
-
-const getUserAdminView = userAV => ({
-  type: GET_USER_ADMIN_VIEW,
-  userAV
 })
 
 const removeUser = () => ({
@@ -58,17 +52,6 @@ export const auth = (credentials, method) => async dispatch => {
   }
 }
 
-export const adminGetUser = id => {
-  return async dispatch => {
-    try {
-      const {data} = await axios.get(`/api/users/${id}`)
-      dispatch(getUserAdminView(data))
-    } catch (error) {
-      console.error(error)
-    }
-  }
-}
-
 export const logout = () => async dispatch => {
   try {
     await axios.post('/auth/logout')
@@ -86,8 +69,6 @@ export default function(state = defaultUser, action) {
   switch (action.type) {
     case GET_USER:
       return action.user
-    case GET_USER_ADMIN_VIEW:
-      return action.userAV
     case REMOVE_USER:
       return defaultUser
     default:
