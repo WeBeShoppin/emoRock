@@ -30,20 +30,25 @@ const decrementItemQty = items => ({
 // THUNK CREATORS
 export const getCartFromStorage = loggedIn => async dispatch => {
   try {
-    let cart
+    let cart = []
     let {data: user} = await axios.get('/auth/me')
     if (loggedIn === false) {
       cart = localStorage.getItem('cart')
-      if (cart) {
+      if (cart.length !== 0) {
         cart = JSON.parse(cart)
-      } else {
-        cart = []
       }
     } else {
       const res = await axios.get(`/api/users/${user.id}/cart`)
-      cart = res.data
-      console.log('cart in getCart', cart)
+      // cart coming from database does not look like stata
+      // loop through response from database to contruct proper cart
+      for (let i = 0; i < res.data.length; i++) {
+        let item = res.data[i]
+        console.log('current Item', item)
+        let rockForCart = {...item.rock, qty: item.quantity}
+        cart.push(rockForCart)
+      }
     }
+    console.log('cart in getCart', cart)
     dispatch(getCart(cart))
   } catch (err) {
     console.error(err.message)
@@ -133,6 +138,7 @@ const totalQty = cartItems => {
 export default function(state = initialState, action) {
   switch (action.type) {
     case GET_CART: {
+      console.log('in reducer', action.cart)
       let cartTotal = totalPrice(action.cart)
       let cartQtyTotal = totalQty(action.cart)
       return {

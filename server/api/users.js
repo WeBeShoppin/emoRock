@@ -55,7 +55,7 @@ router.get('/:userId/cart', async (req, res, next) => {
       include: [{model: Rock}]
     })
 
-    if (cart) {
+    if (cartDetials) {
       res.json(cartDetials)
     } else {
       res.json([])
