@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const {User, Cart, Order, Rock} = require('../db/models')
+const {User, Cart, CartDetail, Rock} = require('../db/models')
 module.exports = router
 
 router.get('/', async (req, res, next) => {
@@ -47,25 +47,16 @@ router.get('/:userId', async (req, res, next) => {
 
 router.get('/:userId/cart', async (req, res, next) => {
   try {
-    let rockIdsInCart = await Cart.findAll({
+    let cart = await Cart.findByPk(req.params.userId)
+    let cartDetials = await CartDetail.findAll({
       where: {
-        userId: req.params.userId
+        cartId: cart.id
       },
-      attributes: ['rockId'],
-      raw: true
+      include: [{model: Rock}]
     })
 
-    let rocksFromCart = []
-
-    for (const rockId of rockIdsInCart) {
-      const rock = await Rock.findByPk(rockId.id)
-      return rocksFromCart.push(rock)
-    }
-
-    console.log('rocksFromCart', rocksFromCart)
-    // const rocksInCart = await Rock.findAll
-    if (rocksFromCart) {
-      res.json(rocksFromCart)
+    if (cart) {
+      res.json(cartDetials)
     } else {
       res.json([])
     }
