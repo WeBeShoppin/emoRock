@@ -47,7 +47,6 @@ const Routes = () => {
       <Route path="/users/:userId" component={AdminUser} />
       <Route exact path="/users" component={UserList} />
       <Route path="/confirmation" component={Confirmation} />
-      {/* Displays our Landing component as a fallback */}
       <Route component={Landing} />
     </Switch>
   )
