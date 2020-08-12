@@ -11,8 +11,8 @@ function Checkout() {
   let subtotal = prices.reduce((acc, current) => acc + current, 0)
   let taxPercent = 0.08875
   let tax = 1.08875
-  let shipping = 9.99
-  let grandTotal = Math.round(subtotal * tax) / 100 + shipping
+  let shipping = 999
+  let grandTotal = Math.round(subtotal * tax + shipping) / 100
 
   return (
     <div id="checkoutDiv">

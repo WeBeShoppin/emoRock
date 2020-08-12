@@ -9,7 +9,7 @@ export default function CheckoutForm(props) {
   let orderObj = {
     subtotal: subtotal * 100,
     tax: tax * 100000,
-    shipping: shipping * 100,
+    shipping: shipping,
     grandTotal: Math.round(grandTotal * 100),
     status: 'confirmed',
     orderNumber: orderid.generate()

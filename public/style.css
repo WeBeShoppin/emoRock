@@ -60,19 +60,25 @@ footer {
 
 .nav {
   display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
+  grid-gap: 1rem;
   grid-template-columns: 2fr 9fr 1fr 1fr 1fr;
   background-color: black;
   color: white;
   text-align: center;
+  height: 100px;
 }
 
-/* .rockList {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-} */
+#shopAll {
+  font-size: 24px;
+  font-weight: bold;
+  /* grid-column: 1 / span 2; */
+}
 
 #logo {
   text-align: center;
+  height: 75px;
+  /* grid-column: 1 / span 2; */
 }
 
 .shopping-cart {
