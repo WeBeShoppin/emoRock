@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {
-  getCartFromStorage,
+  fetchCart,
   addItemToLocalStorage,
   deleteItemFromLocalStorage,
   decreaseItemQty
@@ -14,7 +14,7 @@ function Cart(props) {
   const dispatch = useDispatch()
 
   const loadCart = () => {
-    dispatch(getCartFromStorage(isLoggedIn))
+    dispatch(fetchCart(isLoggedIn))
   }
 
   useEffect(() => {

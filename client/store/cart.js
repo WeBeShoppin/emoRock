@@ -28,7 +28,7 @@ const decrementItemQty = items => ({
 })
 
 // THUNK CREATORS
-export const getCartFromStorage = loggedIn => async dispatch => {
+export const fetchCart = loggedIn => async dispatch => {
   try {
     let cart = []
     let {data: user} = await axios.get('/auth/me')
