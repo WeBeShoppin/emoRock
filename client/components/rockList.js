@@ -24,8 +24,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper
   },
   gridList: {
-    width: 1000,
-    height: 450
+    width: '80%',
+    height: '80%'
   },
   icon: {
     color: 'rgb(255, 255, 255)'
@@ -73,7 +73,7 @@ function RockList() {
   return (
     <div>
       <div className={classes.root}>
-        <GridList cellHeight={180} className={classes.gridList} cols={4}>
+        <GridList cellHeight="250" className={classes.gridList} cols={4}>
           <GridListTile key="Subheader" cols={4} style={{height: 'auto'}}>
             <ListSubheader component="div">
               <label htmlFor="categoriesFilter">Shop by categories: </label>
@@ -90,7 +90,12 @@ function RockList() {
           {filteredRocks.map(rock => (
             <GridListTile key={rock.id} cols={1}>
               <Link to={`/rocks/${rock.id}`} component={SingleRock}>
-                <img src={rock.imageUrl} alt={rock.name} width="100%" />
+                <img
+                  src={rock.imageUrl}
+                  alt={rock.name}
+                  width="100%"
+                  height="182px"
+                />
               </Link>
               <GridListTileBar
                 title={rock.name}

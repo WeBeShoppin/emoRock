@@ -15,10 +15,6 @@ export default function CheckoutForm(props) {
     orderNumber: orderid.generate()
   }
 
-  function handleChange() {
-    console.log(props)
-  }
-
   function handleSubmit(e) {
     e.preventDefault()
   }
@@ -27,33 +23,15 @@ export default function CheckoutForm(props) {
     <div id="orderForm">
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">First Name:</label>
-        <input
-          type="text"
-          name="firstName"
-          //value={state.lastName}
-          onChange={handleChange}
-        />
+        <input type="text" name="firstName" />
         <label htmlFor="lastName">Last Name:</label>
-        <input
-          type="text"
-          name="lastName"
-          //value={state.lastName}
-          onChange={handleChange}
-        />
+        <input type="text" name="lastName" />
         <label htmlFor="address">Address:</label>
-        <input
-          type="text"
-          name="address"
-          //value={state.address}
-          onChange={handleChange}
-        />
+        <input type="text" name="address" />
         <label htmlFor="phone">Phone Number:</label>
-        <input
-          type="text"
-          name="phone"
-          //value={state.phone}
-          onChange={handleChange}
-        />
+        <input type="text" name="phone" />
+        <br />
+        <br />
         <Link
           to={{
             pathname: '/confirmation',
@@ -61,7 +39,9 @@ export default function CheckoutForm(props) {
             orderObj
           }}
         >
-          <button type="submit">Place Order</button>
+          <button id="placeOrderBtn" type="submit">
+            Place Order
+          </button>
         </Link>
       </form>
     </div>
