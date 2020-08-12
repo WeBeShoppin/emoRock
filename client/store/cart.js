@@ -150,7 +150,6 @@ export const decreaseItemQty = item => async (dispatch, getState) => {
     }
 
     let itemIndex = cart.findIndex(r => r.id === item.id)
-    console.log('item index', itemIndex)
 
     if (item.qty > 1) {
       item.qty -= 1
@@ -159,7 +158,6 @@ export const decreaseItemQty = item => async (dispatch, getState) => {
         localStorage.setItem('cart', JSON.stringify(cart))
         dispatch(decrementItemQty(cart))
       } else {
-        console.log('item', item)
         await axios.put(`/api/users/${user.id}/cart`, item)
         dispatch(decrementItemQty(cart))
       }
