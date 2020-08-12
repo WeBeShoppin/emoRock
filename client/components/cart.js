@@ -8,13 +8,12 @@ import {
   decreaseItemQty
 } from '../store/cart'
 
-function Cart(props) {
-  const {isLoggedIn} = props
+function Cart() {
   const cart = useSelector(state => state.cart)
   const dispatch = useDispatch()
 
   const loadCart = () => {
-    dispatch(fetchCart(isLoggedIn))
+    dispatch(fetchCart())
   }
 
   useEffect(() => {
@@ -22,15 +21,15 @@ function Cart(props) {
   }, [])
 
   const handleAddBtn = item => {
-    dispatch(addItemToLocalStorage(item, isLoggedIn))
+    dispatch(addItemToLocalStorage(item))
   }
 
   const handleDeleteBtn = itemId => {
-    dispatch(deleteItemFromLocalStorage(itemId, isLoggedIn))
+    dispatch(deleteItemFromLocalStorage(itemId))
   }
 
   const handleMinusBtn = item => {
-    dispatch(decreaseItemQty(item, isLoggedIn))
+    dispatch(decreaseItemQty(item))
   }
 
   return (

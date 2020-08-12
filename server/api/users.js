@@ -47,19 +47,66 @@ router.get('/:userId', async (req, res, next) => {
 
 router.get('/:userId/cart', async (req, res, next) => {
   try {
-    let cart = await Cart.findByPk(req.params.userId)
-    let cartDetials = await CartDetail.findAll({
-      where: {
-        cartId: cart.id
-      },
-      include: [{model: Rock}]
-    })
+    let cart = await Cart.findOne({where: {userId: req.params.userId}})
 
-    if (cartDetials) {
-      res.json(cartDetials)
+    if (cart) {
+      let cartDetails = await CartDetail.findAll({
+        where: {
+          cartId: cart.id
+        },
+        include: [{model: Rock}]
+      })
+      if (cartDetails) {
+        res.json(cartDetails)
+      } else {
+        res.json([])
+      }
     } else {
       res.json([])
     }
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post('/:userId/cart', async (req, res, next) => {
+  try {
+    let rock = req.body
+
+    let [newCart] = await Cart.findOrCreate({
+      where: {userId: req.params.userId}
+    })
+
+    let newRock = await CartDetail.findOrCreate({
+      where: {
+        cartId: newCart.id,
+        rockId: rock.id,
+        quantity: rock.qty
+      }
+    })
+
+    res.json(newRock)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.put('/:userId/cart', async (req, res, next) => {
+  try {
+    const rockInCartToUpdate = await CartDetail.findOne({
+      where: {rockId: req.body.id}
+    })
+    const newRock = await rockInCartToUpdate.update({quantity: req.body.qty})
+    res.json(newRock)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.delete('/:userId/cart', async (req, res, next) => {
+  try {
+    await CartDetail.destroy({where: {rockId: req.body.rockId}})
+    res.status(204).end()
   } catch (err) {
     next(err)
   }
