@@ -1,3 +1,5 @@
+/* eslint-disable complexity */
+/* eslint-disable max-statements */
 import axios from 'axios'
 
 // ACTION TYPES
@@ -55,8 +57,6 @@ export const fetchCart = () => async dispatch => {
   }
 }
 
-// eslint-disable-next-line max-statements
-// eslint-disable-next-line complexity
 export const addItemToLocalStorage = rock => async (dispatch, getState) => {
   try {
     let {data: user} = await axios.get('/auth/me')
@@ -80,7 +80,7 @@ export const addItemToLocalStorage = rock => async (dispatch, getState) => {
     }
 
     let addedItem = cart.find(r => r.id === rock.id)
-    let addedItemIndex = cart.indexOf(r => r.id === rock.id)
+    let addedItemIndex = cart.findIndex(r => r.id === rock.id)
 
     // if item is not new in cart
     if (addedItem) {
@@ -131,19 +131,49 @@ export const deleteItemFromLocalStorage = itemId => async (
   }
 }
 
-export const decreaseItemQty = (item, loggedIn) => (dispatch, getState) => {
+export const decreaseItemQty = item => async (dispatch, getState) => {
   try {
-    let cart = getState().cart.items
-    let itemIndex = cart.indexOf(r => r.id === item.id)
+    let {data: user} = await axios.get('/auth/me')
+
+    let cart = []
+    if (!user) {
+      cart = getState().cart.items
+    } else {
+      const res = await axios.get(`/api/users/${user.id}/cart`)
+      if (res) {
+        for (let i = 0; i < res.data.length; i++) {
+          let element = res.data[i]
+          let rockForCart = {...element.rock, qty: element.quantity}
+          cart.push(rockForCart)
+        }
+      }
+    }
+
+    let itemIndex = cart.findIndex(r => r.id === item.id)
+    console.log('item index', itemIndex)
+
     if (item.qty > 1) {
       item.qty -= 1
       cart[itemIndex] = item
-      localStorage.setItem('cart', JSON.stringify(cart))
-      dispatch(decrementItemQty(cart))
+      if (!user) {
+        localStorage.setItem('cart', JSON.stringify(cart))
+        dispatch(decrementItemQty(cart))
+      } else {
+        console.log('item', item)
+        await axios.put(`/api/users/${user.id}/cart`, item)
+        dispatch(decrementItemQty(cart))
+      }
     } else {
       let newCart = cart.filter(r => r.id !== item.id)
-      localStorage.setItem('cart', JSON.stringify(newCart))
-      dispatch(decrementItemQty(newCart))
+      if (!user) {
+        localStorage.setItem('cart', JSON.stringify(newCart))
+        dispatch(decrementItemQty(newCart))
+      } else {
+        await axios.delete(`/api/users/${user.id}/cart`, {
+          data: {rockId: item.id}
+        })
+        dispatch(decrementItemQty(newCart))
+      }
     }
   } catch (err) {
     console.error(err.message)
