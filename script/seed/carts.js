@@ -1,4 +1,5 @@
 const faker = require('faker')
+faker.seed(3)
 
 function generateCarts() {
   let carts = []

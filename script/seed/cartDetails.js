@@ -1,4 +1,5 @@
 const faker = require('faker')
+faker.seed(3)
 
 function generateCartDetails() {
   let cartItem = []
@@ -15,5 +16,7 @@ function generateCartDetails() {
 }
 
 let cartDetails = generateCartDetails()
+
+console.log(cartDetails)
 
 module.exports = cartDetails.data
