@@ -18,7 +18,7 @@ const Navbar = () => {
             {/* The navbar will show these links after you log in */}
             <div id="logo">
               <Link to="/home">
-                <img src="/EmoRocksLogo.png" />
+                <img src="/EmoRocksLogo.png" height="75px" />
               </Link>
             </div>
             <div id="shopAll">
@@ -35,7 +35,7 @@ const Navbar = () => {
             {/* The navbar will show these links before you log in */}
             <div id="logo">
               <Link to="/home">
-                <img src="/EmoRocksLogo.png" />
+                <img src="/EmoRocksLogo.png" height="75px" />
               </Link>
             </div>
             <div id="shopAll">
