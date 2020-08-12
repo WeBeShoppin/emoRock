@@ -19,24 +19,8 @@ router.get('/', async (req, res, next) => {
         ]
       })
       res.json(users)
-    }
-  } catch (err) {
-    next(err)
-  }
-})
-
-router.get('/:userId/cart', async (req, res, next) => {
-  try {
-    if (!req.user) {
-      res.send(401)
-    } else if (req.user.id === req.params.userId || req.user.isAdmin) {
-      const user = await User.findByPk(req.params.userId)
-
-      if (user) {
-        res.json(user)
-      }
     } else {
-      res.status(404).send('The user is not found')
+      res.send('Not authorized')
     }
   } catch (err) {
     next(err)
