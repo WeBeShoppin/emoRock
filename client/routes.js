@@ -47,14 +47,7 @@ const Routes = () => {
       <Route path="/users/:userId" component={AdminUser} />
       <Route exact path="/users" component={UserList} />
       <Route path="/confirmation" component={Confirmation} />
-      {/* Displays our Landing component as a fallback */}
       <Route component={Landing} />
-      {isLoggedIn && (
-        <Switch>
-          {/* Routes placed here are only available after logging in */}
-          <Route path="/home" component={Landing} />
-        </Switch>
-      )}
     </Switch>
   )
 }

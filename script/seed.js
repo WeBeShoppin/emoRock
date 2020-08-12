@@ -1,8 +1,8 @@
 'use strict'
 
 const db = require('../server/db')
-const {User, Rock, Order} = require('../server/db/models')
-const {users, orders, rocks} = require('./seed/index')
+const {User, Rock, Order, CartDetail, Cart} = require('../server/db/models')
+const {users, orders, rocks, cartDetails, carts} = require('./seed/index')
 
 async function seed() {
   await db.sync({force: true})
@@ -20,9 +20,19 @@ async function seed() {
     returning: true
   })
 
+  const dummyCarts = await Cart.bulkCreate(carts, {
+    returning: true
+  })
+
+  const dummyCartDetails = await CartDetail.bulkCreate(cartDetails, {
+    returning: true
+  })
+
   console.log(`seeded ${dummyUsers.length} users`)
   console.log(`seeded ${dummyRocks.length} rocks`)
   console.log(`seeded ${dummyOrders.length} orders`)
+  console.log(`seeded ${dummyCarts.length} carts`)
+  console.log(`seeded ${dummyCartDetails.length} cartDetails`)
 
   console.log(`seeded successfully`)
 }
