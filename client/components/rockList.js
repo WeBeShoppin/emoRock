@@ -63,7 +63,7 @@ function RockList() {
 
   const filteredRocks = rocks.filter(rock => {
     if (filter === 'All') return rocks
-    if (filter === 'Enjoyment') return rock.category === 'Enojyment'
+    if (filter === 'Enjoyment') return rock.category === 'Enjoyment'
     if (filter === 'Sadness') return rock.category === 'Sadness'
     if (filter === 'Fear') return rock.category === 'Fear'
     if (filter === 'Anger') return rock.category === 'Anger'
