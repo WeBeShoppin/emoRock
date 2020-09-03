@@ -5,6 +5,8 @@
     expand and display the skills of our group as we
     begin the final stages of our education at Fullstack
     Academy in the Grace Hopper Program *
+    
+## View a depoloyed version of this site on [Heroku](http://emorocks.herokuapp.com)
 
 ## Getting Started
 
